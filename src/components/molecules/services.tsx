@@ -61,7 +61,7 @@ const services = [
 const Services = () => {
   return (
     <Container fluid className='services'>
-      <div className='heading-orange'>SERVICES I OFFER</div>
+      <div className='heading-orange mb-40px'>SERVICES I OFFER</div>
       <Row>
         {services.map((service, index) => <Col key={index}><Service data={service} count={index+1}/></Col>)}
       </Row>

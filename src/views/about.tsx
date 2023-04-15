@@ -7,13 +7,13 @@ import SteadFast from '../assets/images/values/steadfast.svg'
 import Unity from '../assets/images/values/unity.svg'
 import KeepItSimple from '../assets/images/values/keep-it-simple.svg'
 import RaiseTheBar from '../assets/images/values/raise-the-bar.svg'
-import AdobeXd from '../assets/images/tools/adobe-xd.png'
-import Figma from '../assets/images/tools/figma.png'
-import Photoshop from '../assets/images/tools/photoshop.png'
-import Trello from '../assets/images/tools/trello.png'
-import Zoom from '../assets/images/tools/zoom.png'
-import Miro from '../assets/images/tools/miro.png'
-import Zeplin from '../assets/images/tools/zeplin.png'
+import AdobeXd from '../assets/images/tools/adobe-xd-2.png'
+import Figma from '../assets/images/tools/figma-2.png'
+import Photoshop from '../assets/images/tools/photoshop-2.png'
+import Trello from '../assets/images/tools/trello-2.png'
+import Zoom from '../assets/images/tools/zoom-2.png'
+import Miro from '../assets/images/tools/miro-2.png'
+import Zeplin from '../assets/images/tools/zeplin-2.png'
 import AdobeIlludtrator from '../assets/images/tools/adobe-illustrator.png'
 import Value from '../components/atoms/value'
 import Tool from '../components/atoms/tool'
@@ -159,9 +159,9 @@ const About = () => {
         <div className='about-heading'>ABOUT ME</div>
         <Row>
           <Col md={6}>
-            <p className='text-gray'>My expertise lies in leveraging current trends to design websites, applications and brand identities that are optimised for maximum engagement, reach and conversions.</p>
-            <p className='text-gray'>I work not just for my clients but with them, and strive to understand the deeper business needs to tailor my outcomes accordingly.</p>
-            <p className='text-gray'>During the last half-decade, I have been privileged to work with many enterprises of varying sizes, from growing startups to multinationals, across 10+ industries.</p>
+            <p className='color-gray'>My expertise lies in leveraging current trends to <b>design websites, applications and brand identities</b> that are optimised for maximum engagement, reach and conversions.</p>
+            <p className='color-gray'>I work not just for my clients but with them, and strive to understand the deeper business needs to <b>tailor my outcomes</b> accordingly.</p>
+            <p className='color-gray'>During the last <b>half-decade</b>, I have been privileged to work with many enterprises of varying sizes, from <b>growing startups to multinationals</b>, across <b>10+ industries</b>.</p>
           </Col>
         </Row>
         <p className='mt-3 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
@@ -169,12 +169,12 @@ const About = () => {
         <ButtonDark text="GET IN TOUCH" />
       </div>
       <div className='values-section'>
-        <div className='heading-orange'>WHAT DRIVES ME</div>
+        <div className='heading-orange mb-10px'>WHAT DRIVES ME</div>
         <h2 className='fw-600 text-light text-center'>Values & Beliefs</h2>
         <div className='values mt-5'>
           {values.map(data => <Value data={data} />)}
         </div>
-        <div className='heading-orange mt-120px'>Converting ideas into reality</div>
+        <div className='heading-orange mt-120px mb-10px'>CONVERTING IDEAS INTO RELAITY</div>
         <h2 className='fw-600 text-light text-center'>Tools & Services</h2>
         <div className='tools mt-5'>
           {tools.map(data => <Tool data={data} />)}
@@ -183,7 +183,7 @@ const About = () => {
       </div>
       <div className='passion-section text-center'>
         <h2>Passion Projects</h2>
-        <p className='text-gray mb-5'>Here’s a small photo dump of something I occasionally dabble with. Painting, drawing and<br />digital sketching allows me to think beyond limits, polishing my creativity.</p>
+        <p className='text-gray mb-5 mt-24'>Here’s a small photo dump of something I occasionally dabble with. Painting, drawing and<br />digital sketching allows me to think beyond limits, polishing my creativity.</p>
         <Row>
           {pasion_projects.map(project => <Col md={4} className="mb-4"><img src={project} alt="" /></Col>)}
         </Row>
@@ -197,11 +197,11 @@ const About = () => {
           {work_experience.map(data => {
             return (
               <div className='mb-5 d-flex'>
-                <div className='color-orange fw-600 align-self-center'>
+                <div className='year-section color-orange fw-600 align-self-center'>
                   <div className='year'><p>{data.year}</p></div>
                 </div>
                 <div>
-                  <h6 className='text-light'>{data.title}</h6>
+                  <h6 className='text-light main-heading'>{data.title}</h6>
                   <h6 className='fw-300 color-gray'>{data.desc}</h6>
                 </div>
               </div>

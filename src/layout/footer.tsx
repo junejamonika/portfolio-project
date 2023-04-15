@@ -7,15 +7,18 @@ import Mail from '../assets/images/icon-mail.svg';
 import Linkdein from '../assets/images/logo-linkedin.svg';
 import Phone from '../assets/images/icon-phone-square-alt.svg';
 import Fiverr from '../assets/images/icon-fiverr.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <Container fluid className='footer text-center'>
             <div className='text-small'>Got a project or partnership in mind?</div>
             <h5 className='mb-5'><span className='color-orange'>Let’s collaborate</span> and bring creative solutions to life.</h5>
-            <ButtonDark text='START A PROJECT' />
-            <span className='me-4'></span>
-            <ButtonOutline text="MAIL ME" outline="outline-dark" />
+            <div className='d-flex justify-content-center'>
+                <ButtonDark text='START A PROJECT' />
+                <span className='me-4'></span>
+                <ButtonOutline text="MAIL ME" outline="outline-dark" />
+            </div>
             <Navbar expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">
@@ -23,9 +26,9 @@ const Footer = () => {
                     </Navbar.Brand>
                     <Navbar>
                         <Nav className="me-auto footer-nav">
-                            <Nav.Link href="#home">WORK</Nav.Link>
-                            <Nav.Link href="#link">ABOUT</Nav.Link>
-                            <Nav.Link href="#link">CONTACT</Nav.Link>
+                            <Nav.Link as={Link} to="work">WORK</Nav.Link>
+                            <Nav.Link as={Link} to="about">ABOUT</Nav.Link>
+                            <Nav.Link as={Link} to="contact">CONTACT</Nav.Link>
                         </Nav>
                     </Navbar>
                     <Navbar>

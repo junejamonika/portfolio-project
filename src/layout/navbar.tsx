@@ -17,7 +17,7 @@ function Appbar() {
         handleClose();
     }
     return (
-        <Navbar expand={false} sticky="top">
+        <Navbar expand={false} fixed="top">
             <Container>
                 <Navbar.Brand href="#home">
                     <img src={Logo} height={60} />

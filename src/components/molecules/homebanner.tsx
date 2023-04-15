@@ -4,6 +4,7 @@ import HandIcon from '../../assets/images/hand-icon.png'
 import BannerImg from '../../assets/images/smeet-photo.png'
 import ButtonDark from '../atoms/buttondark'
 import ButtonOutline from '../atoms/buttonoutline'
+import { Link } from 'react-router-dom'
 
 const HomeBanner = () => {
   return (
@@ -16,8 +17,8 @@ const HomeBanner = () => {
           <p className='innovate'>Innovate. Evolve.</p>
         </div>
         <div className='home-buttons mt-40'>
-          <ButtonDark text="START A PROJECT"/>
-          <ButtonOutline text="VIEW WORK" outline="outline-dark"/>
+          <Link to="/contact"><ButtonDark text="START A PROJECT"/></Link>
+          <Link to="/work"><ButtonOutline text="VIEW WORK" outline="outline-dark"/></Link>
         </div>
     </Container>
   )
