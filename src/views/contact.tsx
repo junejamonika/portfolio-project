@@ -71,7 +71,7 @@ const Contact = () => {
                   <Col md={6}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Name*</Form.Label>
-                      <Form.Control className='text-field' type="text" placeholder="Your Name" onChange={() => setName} />
+                      <Form.Control className='text-field' type="text" placeholder="Your Name" onChange={(e) => setName(e.target.value)} />
                       <Form.Control.Feedback type="invalid" className={errors.name ? 'd-block' : ''}>
                         <AiOutlineExclamationCircle/> Please fill in the required field.
                       </Form.Control.Feedback>
@@ -80,7 +80,7 @@ const Contact = () => {
                   <Col md={6} >
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                       <Form.Label>Email*</Form.Label>
-                      <Form.Control className='text-field' type="email" placeholder="xyz@company.com" onChange={() => setEmail} />
+                      <Form.Control className='text-field' type="email" placeholder="xyz@company.com" onChange={(e) => setEmail(e.target.value)} />
                       <Form.Control.Feedback type="invalid" className={errors.name ? 'd-block' : ''}>
                       <AiOutlineExclamationCircle/> Please fill in the required field.
                       </Form.Control.Feedback>

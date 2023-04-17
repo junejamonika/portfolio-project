@@ -22,10 +22,10 @@ function Appbar() {
                 <Navbar.Brand href="#home">
                     <img src={Logo} height={60} />
                 </Navbar.Brand>
-                <BiMenuAltRight size={30} onClick={handleShow} className="menu-icon" />
+                <BiMenuAltRight size={38} onClick={handleShow} className="menu-icon" />
                 <Offcanvas show={show} onHide={handleClose} placement="bottom">
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>
+                        <Offcanvas.Title onClick={() => handleClick('')}>
                             <img src={Logo} height={60} />
                         </Offcanvas.Title>
                     </Offcanvas.Header>
@@ -39,7 +39,7 @@ function Appbar() {
                             </Nav>
                             <div className='position-absolute bottom-0 nav-bottom'>
                                 <div>&copy; All rights reserved</div>
-                                <div>(+91) 90048-55805  |  smeetmak@gmail.com</div>
+                                <div className='email-link'><a href="tel:+91-90048-55805">(+91) 90048-55805</a>  |  <a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></div>
                             </div>
                         </div>
                     </Offcanvas.Body>
