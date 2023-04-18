@@ -8,6 +8,7 @@ import ProjectFive from '../assets/images/projects/project1/5.png'
 import ProjectTwo from '../assets/images/projects/project2/1.png'
 import ProjectThree from '../assets/images/projects/project3/1.png'
 import { Col, Row } from 'react-bootstrap'
+import ButtonOutline from '../components/atoms/buttonoutline'
 
 const works = [
   {
@@ -116,12 +117,15 @@ const works = [
 
 const Works = () => {
   return (
-    <div className='work-section'>
+    <div className='work-section mt-100'>
       <Row className='work-title'>
         <Col md={4}><h1 className='text-white'>Work</h1></Col>
-        <Col md={8} className="text-gray">During the last half-decade, I have been privileged to work with many enterprises of varying sizes, from growing startups to multinationals, across 10+ industries. Here’s a glimpse into some of my work.</Col>
+        <Col md={8} className="text-gray align-self-center text-end"><a href="tel:+91-90048-55805">(+91) 90048-55805</a> | <a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></Col>
       </Row>
       {works.map(data => <Work data={data} />)}
+      <div className="d-flex justify-content-center mt-60">
+        <ButtonOutline text="LOAD MORE" outline="outline-light" />
+      </div>
     </div>
   )
 }

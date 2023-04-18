@@ -27,6 +27,8 @@ import ProjectSeven from '../assets/images/passion-projects/7.png'
 import ProjectEight from '../assets/images/passion-projects/8.png'
 import ProjectNine from '../assets/images/passion-projects/9.png'
 import ButtonDark from '../components/atoms/buttondark'
+import Lottie from 'lottie-react'
+import animationData from '../assets/animations/scroll-down-animation.json';
 
 const values = [
   {
@@ -156,6 +158,9 @@ const About = () => {
   return (
     <Container fluid className='p-0'>
       <div className='about-banner'>
+        <div className='d-flex justify-content-center'>
+          <Lottie className='scroll-down-animation' animationData={animationData} loop={true} />
+        </div>
         <div className='about-heading'>ABOUT ME</div>
         <Row>
           <Col md={6}>
@@ -165,7 +170,7 @@ const About = () => {
           </Col>
         </Row>
         <p className='mt-3 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
-        <div className='d-flex color-orange mb-4'><hr className='hr-length align-self-center'/><p>Your Design partner from Mumbai, India.</p></div>
+        <div className='d-flex color-orange mb-4'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
         <ButtonDark text="GET IN TOUCH" />
       </div>
       <div className='values-section'>

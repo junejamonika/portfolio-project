@@ -37,7 +37,7 @@ const DesignProcess = () => {
   }
   return (
     <Container fluid className='design-preocess'>
-      <p className='text-sm-oragne text-center'>SIMPLE 3 STEP</p>
+      <p className='text-sm-oragne text-center'>SIMPLE 3-STEP</p>
       <h2 className='text-center'>Design Process</h2>
       <div className='process-section'>
       {process.map((data, index) => {

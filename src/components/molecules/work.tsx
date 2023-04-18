@@ -22,7 +22,7 @@ const Work = (props: any) => {
                             {data.list.map((entry: string, index: number) => <li key={index}>{entry}</li>)}
                         </ul>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className='align-self-center'>
                         <div className='float-end'>
                             {data.buttons.map((button: any) => <span className='me-3'><ButtonRound button={button} /></span>)}
                         </div>
