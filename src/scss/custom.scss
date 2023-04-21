@@ -732,6 +732,12 @@ a {
                 border-color: $color_orange;
             }
         }
+        a {
+            color: $color_orange; 
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
     img {

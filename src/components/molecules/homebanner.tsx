@@ -4,7 +4,7 @@ import HandIcon from '../../assets/images/hand-icon.png'
 import BannerImg from '../../assets/images/smeet-photo.png'
 import ButtonDark from '../atoms/buttondark'
 import ButtonOutline from '../atoms/buttonoutline'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Lottie from "lottie-react";
 import animationData from '../../assets/animations/scroll-down-animation.json';
 
