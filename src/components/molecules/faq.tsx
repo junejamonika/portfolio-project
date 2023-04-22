@@ -4,7 +4,7 @@ import { Accordion, Container } from 'react-bootstrap'
 const FAQ = (props: any) => {
   const { data } = props;
   return (
-    <Container fluid className='faq-section'>
+    <Container fluid className='faq-section' id="faq">
       <div className='m-auto faq'>
         <h2 className='text-white faq-heading'>Frequently Asked Questions</h2>
         <Accordion defaultActiveKey="key-0" flush>

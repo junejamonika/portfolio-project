@@ -697,9 +697,9 @@ a {
 }
 
 .contact {
-    margin-top: 90px;
 
     .contact-form {
+        margin-top: 90px;
         background-image: url(../assets/images/contact-background.png);
         background-size: cover;
         padding: 40px 60px 80px 80px;
@@ -740,14 +740,37 @@ a {
         }
     }
 
-    img {
-        height: 100%;
-        width: 100%;
-    }
-
     .contact-submit {
-        background-image: url(../assets/images/background-two.png);
+        margin-top: 90px;
         padding: 40px 0px 80px 80px;
+        ul {
+            padding-left: 15px;
+            li {
+                padding-top: 10px;
+                &:hover{text-decoration: underline;}
+                cursor: pointer;
+                letter-spacing: normal;
+                font-weight: 600;
+                font-size: 18px;
+                a {
+                    color: $color_orange;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-confirm {
+    background-image: url(../assets/images/contact-background-two.png);
+    background-size: contain;
+    .col {
+        align-self: center;
+    }
+    img {
+        height: 440px;
     }
 }
 

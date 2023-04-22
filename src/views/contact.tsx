@@ -7,6 +7,7 @@ import { AiOutlineExclamationCircle } from 'react-icons/ai';
 import ButtonDark from '../components/atoms/buttondark';
 import animationData from '../assets/animations/scroll-down-animation.json';
 import Lottie from 'lottie-react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [isSubmit, setIsSubmit] = useState(false);
@@ -57,6 +58,13 @@ const Contact = () => {
       setIsSubmit(true);
     }
     setErrors(errors);
+  }
+
+  const handleScroll = () => {
+    const element = document.getElementById('faq');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 
@@ -116,17 +124,17 @@ const Contact = () => {
                 <ButtonDark handleClick={handleSubmit} text="LET'S GET STARTED" />
               </Form>
             </Col>
-            <Col md={6} className="p-0"><img src={ContactImg} /></Col>
+            <Col md={6} className="p-0"><img className='h-100 w-100' src={ContactImg} /></Col>
           </Row>) : (
-          <Row className='contact d-flex'>
+          <Row className='contact d-flex contact-confirm'>
             <Col md={7} className="contact-submit">
               <h3>Thank You for your time!<br/>I’ve received your message.</h3>
-              <p className='text-gray mt-2'>I’m excited to learn more about your project. I will personally respond and acknowledge your request via email within 24 hours.</p>
-              <p className='text-gray'>In the meantime, you can check out the following:</p>
+              <p className='text-gray mt-4'>I’m excited to learn more about your project. I will personally respond and acknowledge your request via email within 24 hours.</p>
+              <p className='text-gray mt-4'>In the meantime, you can check out the following:</p>
               <ul className='color-orange mb-5'>
-                <li>Frequently Asked Questions</li>
-                <li>My Work</li>
-                <li>About Me</li>
+                <li onClick={() => handleScroll()}>Frequently Asked Questions</li>
+                <li><Link to="/work">My Work</Link></li>
+                <li><Link to="/about">About Me</Link></li>
               </ul>
               <ButtonDark text="BACK TO HOME" />
             </Col>
