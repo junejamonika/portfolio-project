@@ -3,10 +3,11 @@ import { Container, Nav, Navbar } from 'react-bootstrap'
 import ButtonDark from '../components/atoms/buttondark'
 import ButtonOutline from '../components/atoms/buttonoutline'
 import Logo from '../assets/images/logo.png';
-import Mail from '../assets/images/icon-mail.svg';
-import Linkdein from '../assets/images/logo-linkedin.svg';
-import Phone from '../assets/images/icon-phone-square-alt.svg';
-import Fiverr from '../assets/images/icon-fiverr.svg';
+import {ReactComponent as Mail} from '../assets/images/icon-mail.svg';
+import {ReactComponent as Linkdein} from '../assets/images/logo-linkedin.svg';
+import {ReactComponent as Phone} from '../assets/images/icon-phone-square-alt.svg';
+import {ReactComponent as Fiverr} from '../assets/images/icon-fiverr.svg';
+import {ReactComponent as Upwork} from '../assets/images/icon-upwork.svg';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -33,16 +34,17 @@ const Footer = () => {
                     </Navbar>
                     <Navbar>
                         <Nav className="me-auto nav-icons">
-                            <img src={Mail} height={30} />
-                            <img src={Phone} height={30} />
-                            <img src={Linkdein} height={30} />
-                            <img src={Fiverr} height={30} />
+                            <a href="mailto:smeetmak@gmail.com" target="_blank"><Mail /></a>
+                            <a href="tel:+91-90048-55805" target="_blank"><Phone /></a> 
+                            <a href="https://www.linkedin.com/in/smeet-makwana-488336173" target="_blank"><Linkdein /></a>
+                            <a href="https://www.fiverr.com/smeetmakwana" target="_blank"><Fiverr /></a>
+                            <a href="https://www.upwork.com/freelancers/~01da540389d9b90aff" target="_blank"><Upwork /></a>
                         </Nav>
                     </Navbar>
                 </Container>
             </Navbar>
             <hr/>
-            <div className='d-flex justify-content-between text-gray'>
+            <div className='d-flex justify-content-between color-gray fs-small mb-3'>
                 <p>All rights reserved.</p>
                 <p>Designed in Adobe Xd.</p>
             </div>

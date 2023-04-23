@@ -60,6 +60,10 @@ a {
     color: $color-gray-two;
 }
 
+.color-white {
+    color: #FFFFFF;
+}
+
 .mb-10px {
     margin-bottom: 10px;
 }
@@ -659,6 +663,10 @@ a {
         max-width: 1000px;
     }
 
+    .color-orange:hover {
+        text-decoration: underline;
+    }
+
     // padding: 80px 188px;
     .accordion-item {
         margin: auto;
@@ -666,6 +674,8 @@ a {
         .accordion-button {
             padding-left: 0;
             padding-right: 0;
+            font-size: 24px;
+            font-weight: 500;
 
             &:focus {
                 box-shadow: none;
@@ -779,18 +789,33 @@ a {
     padding: 50px 80px 0 80px;
     background-image: url(../assets/images/footer-background.png);
     background-size: contain;
-
+    background-repeat: no-repeat;
+    
     .footer-nav {
         gap: 80px;
+    }
+
+    .navbar {
+        background-color: transparent;
     }
 
     .nav-link {
         font-weight: bold;
         color: #040403;
+        &:hover {
+            color: $color_orange;
+        }
     }
 
     .nav-icons {
-        gap: 24px;
+        gap: 24px; 
+        svg {
+            height: 30px;
+            width: 30px;
+            &:hover path:first-child {
+                fill: $color_orange !important;
+            }
+        }   
     }
 }
 

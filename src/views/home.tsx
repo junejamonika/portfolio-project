@@ -13,6 +13,7 @@ import ButtonOutline from '../components/atoms/buttonoutline'
 import DesignProcess from '../components/molecules/designprocess'
 import Faq from '../components/molecules/faq'
 import HomeBanner from '../components/molecules/homebanner'
+import { Link } from 'react-router-dom'
 
 const works = [
   {
@@ -153,12 +154,12 @@ const Home = () => {
       <Services />
       <div className='work-section'>
         <Row className='work-title'>
-          <Col md={4}><h1 className='text-white'>Work</h1></Col>
-          <Col md={8} className="text-gray">During the last half-decade, I have been privileged to work with many enterprises of varying sizes, from growing startups to multinationals, across 10+ industries. Here’s a glimpse into some of my work.</Col>
+          <Col md={5}><h1 className='text-white'>Work</h1></Col>
+          <Col md={7} className="text-gray">During the last half-decade, I have been privileged to work with many enterprises of varying sizes, from <span className='color-white'>growing startups to multinationals</span>, across <span className='color-white'>10+ industries</span>. Here’s a glimpse into some of my work.</Col>
         </Row>
         {works.map(data => <Work data={data}/>)}
         <div className="d-flex justify-content-center mt-60">
-          <ButtonOutline text="View More" outline="outline-light" />
+          <Link to="/work"><ButtonOutline text="View More" outline="outline-light" /></Link>
         </div>
       </div>
       <DesignProcess />

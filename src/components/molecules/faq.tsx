@@ -7,7 +7,7 @@ const FAQ = (props: any) => {
     <Container fluid className='faq-section' id="faq">
       <div className='m-auto faq'>
         <h2 className='text-white faq-heading'>Frequently Asked Questions</h2>
-        <Accordion defaultActiveKey="key-0" flush>
+        <Accordion flush>
           {data.map((faq: any, index: number) => {
             return (
               <Accordion.Item eventKey={"key-" + index}>
@@ -17,7 +17,7 @@ const FAQ = (props: any) => {
             )
           })}
         </Accordion>
-        <p className='text-gray mt-40'>Didn’t find the answer you need? If you have any additional questions feel free to shoot me a message at:<br/><span className='color-orange'>smeetmak@gmail.com</span></p>
+        <p className='text-gray mt-40'>Didn’t find the answer you need? If you have any additional questions feel free to shoot me a message at:<br/><a href="mailto:smeetmak@gmail.com"><span className='color-orange'>smeetmak@gmail.com</span></a></p>
       </div>
     </Container>
   )
