@@ -18,7 +18,7 @@ const Service: React.FC<ServiceProps> = (props) => {
             <img src={data.icon} alt="" />
             <h5 className='pt-4 pb-1 title'>{data.title}</h5>
             <p className='text-gray'>{data.desc}</p>
-            <div className='position-absolute bottom-0'>
+            <div className='position-absolute bottom-0 bullet-list'>
                 {data.list.map(entry => <div><GrStar size={10} className="color-orange" /> {entry}</div>)}
                 <div className='service-count'>0{count}</div>
             </div>

@@ -45,7 +45,7 @@ const DesignProcess = () => {
           <div className='process'>
             <p className='process-count'>0{index + 1}</p>
             <div className='process-detail'>
-              <h5>{data.title}</h5>
+              <h5 className='fw-bold'>{data.title}</h5>
               <p className='color-gray'>{data.desc}</p>
             </div>
           </div>

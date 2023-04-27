@@ -15,7 +15,7 @@ const HomeBanner = () => {
         <Lottie className='scroll-down-animation' animationData={animationData} loop={true} />
       </div>
       <img className='banner-img' src={BannerImg} />
-      <p className='fw-600 mb-0 pt-80'><img src={HandIcon} height={36} alt="" className='me-2' />HI THERE, I’M SMEET.</p>
+      <p className='fw-600 mb-0 pt-80'><img src={HandIcon} height={36} alt="" className='me-2 hi-there' />HI THERE, I’M SMEET.</p>
       <div className='banner-heading'>DESIGN</div>
       <div className='d-flex justify-content-between'>
         <p className='text-gray'>Your <span className='color-orange'>UX/UI and Design Consultant</span> partner with a core focus on delivering solutions that not only have a strong aesthetic presence but also generate tangible results for your business.</p>
