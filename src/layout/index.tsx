@@ -5,10 +5,12 @@ import About from '../views/about'
 import Work from '../views/work'
 import Contact from '../views/contact'
 import Footer from './footer'
+import Chat from '../components/molecules/chat'
 
 const Layout = () => {
     return (
         <>
+            <Chat/>
             <Navbar />
             <Routes>
                 <Route path='/' element={<Home />} />

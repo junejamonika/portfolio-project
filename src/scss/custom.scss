@@ -124,6 +124,48 @@ a {
     opacity: 60%;
 }
 
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    .chat-icon {
+        padding: 17px 15px;
+        border-radius: 29px;
+        background-color: rgba(4, 4, 3, 0.7);
+        cursor: pointer;
+        float: right;
+        img {
+            height: 24px;
+        }
+        .drop-line {
+            color: #FFFFFF;
+            padding-right: 10px;
+            display: none;
+        }
+        &:hover {
+            background-color: $color_orange;
+            .drop-line {
+                display: inline-block;
+            }
+        }
+    }
+    .chat-box {
+        height: 300px;
+        padding: 10px;
+        width: 250px;
+        background-color: #FFFFFF;
+        margin-bottom: 10px;
+        border: 1px solid $color_orange;
+        border-radius: 3px;
+        position: relative;
+        .msg-input {
+            position: absolute;
+            bottom: 5px;
+        }
+    }
+}
+
 .menu-icon {
     cursor: pointer;
 
