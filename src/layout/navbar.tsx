@@ -1,5 +1,5 @@
 import { Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas } from 'react-bootstrap';
-import Logo from '../assets/images/logo.png';
+import Logo from '../assets/images/logo.svg';
 import { BiMenuAltRight } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { useState } from 'react';
@@ -19,7 +19,7 @@ function Appbar() {
     return (
         <Navbar expand={false} fixed="top">
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="/">
                     <img src={Logo} height={60} />
                 </Navbar.Brand>
                 <BiMenuAltRight size={38} onClick={handleShow} className="menu-icon" />

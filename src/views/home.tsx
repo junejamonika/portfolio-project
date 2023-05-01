@@ -159,7 +159,7 @@ const Home = () => {
         </Row>
         {works.map(data => <Work data={data}/>)}
         <div className="d-flex justify-content-center mt-60">
-          <Link to="/work"><ButtonOutline text="View More" outline="outline-light" /></Link>
+          <Link to="/work"><ButtonOutline text="VIEW MORE" outline="outline-light" /></Link>
         </div>
       </div>
       <DesignProcess />

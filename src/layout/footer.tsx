@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import ButtonDark from '../components/atoms/buttondark'
 import ButtonOutline from '../components/atoms/buttonoutline'
-import Logo from '../assets/images/logo.png';
+import Logo from '../assets/images/logo.svg';
 import {ReactComponent as Mail} from '../assets/images/icon-mail.svg';
 import {ReactComponent as Linkdein} from '../assets/images/logo-linkedin.svg';
 import {ReactComponent as Phone} from '../assets/images/icon-phone-square-alt.svg';
@@ -16,9 +16,9 @@ const Footer = () => {
             <div className='text-small'>Got a project or partnership in mind?</div>
             <h5 className='mb-5'><span className='color-orange'>Let’s collaborate</span> and bring creative solutions to life.</h5>
             <div className='d-flex justify-content-center'>
-                <ButtonDark text='START A PROJECT' />
+                <Link to="/contact"><ButtonDark text='START A PROJECT' /></Link>
                 <span className='me-4'></span>
-                <ButtonOutline text="MAIL ME" outline="outline-dark" />
+                <a href="mailto:smeetmak@gmail.com"><ButtonOutline text="MAIL ME" outline="outline-dark" /></a>
             </div>
             <Navbar expand="lg">
                 <Container>

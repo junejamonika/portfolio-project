@@ -6,6 +6,7 @@ import AppDesign from '../../assets/images/app-design.png'
 import UxEvaluation from '../../assets/images/ux-evaluation.png'
 import BrandDesign from '../../assets/images/brand-design.png'
 import ButtonDark from '../atoms/buttondark'
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -63,10 +64,10 @@ const Services = () => {
     <Container fluid className='services'>
       <div className='heading-orange mb-40px'>SERVICES I OFFER</div>
       <Row>
-        {services.map((service, index) => <Col key={index}><Service data={service} count={index+1}/></Col>)}
+        {services.map((service, index) => <Col key={index}><Service data={service} count={index + 1} /></Col>)}
       </Row>
       <div className='d-flex justify-content-center'>
-        <ButtonDark text="START A PROJECT"/>
+        <Link to="/contact"><ButtonDark text="START A PROJECT" /></Link>
       </div>
     </Container>
   )

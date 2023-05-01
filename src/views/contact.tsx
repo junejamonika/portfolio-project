@@ -136,7 +136,7 @@ const Contact = () => {
                 <li><Link to="/work">My Work</Link></li>
                 <li><Link to="/about">About Me</Link></li>
               </ul>
-              <ButtonDark text="BACK TO HOME" />
+              <Link to="/"><ButtonDark text="BACK TO HOME" /></Link>
             </Col>
             <Col><img src={ContactImgTwo} /></Col>
           </Row>

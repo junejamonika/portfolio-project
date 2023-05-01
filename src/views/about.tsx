@@ -29,6 +29,7 @@ import ProjectNine from '../assets/images/passion-projects/9.png'
 import ButtonDark from '../components/atoms/buttondark'
 import Lottie from 'lottie-react'
 import animationData from '../assets/animations/scroll-down-animation.json';
+import { Link } from 'react-router-dom'
 
 const values = [
   {
@@ -171,7 +172,7 @@ const About = () => {
         </Row>
         <p className='mt-3 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
         <div className='d-flex color-orange mb-4'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
-        <ButtonDark text="GET IN TOUCH" />
+        <Link to="/contact"><ButtonDark text="GET IN TOUCH" /></Link>
       </div>
       <div className='values-section'>
         <div className='heading-orange mb-10px'>WHAT DRIVES ME</div>
