@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import ButtonDark from '../components/atoms/buttondark'
 import ButtonOutline from '../components/atoms/buttonoutline'
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/images/logo.png';
 import {ReactComponent as Mail} from '../assets/images/icon-mail.svg';
 import {ReactComponent as Linkdein} from '../assets/images/logo-linkedin.svg';
 import {ReactComponent as Phone} from '../assets/images/icon-phone-square-alt.svg';

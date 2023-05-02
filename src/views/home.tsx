@@ -157,7 +157,9 @@ const Home = () => {
           <Col md={5}><h1 className='text-white'>Work</h1></Col>
           <Col md={7} className="text-gray">During the last half-decade, I have been privileged to work with many enterprises of varying sizes, from <span className='color-white'>growing startups to multinationals</span>, across <span className='color-white'>10+ industries</span>. Here’s a glimpse into some of my work.</Col>
         </Row>
-        {works.map(data => <Work data={data}/>)}
+        <div>
+          {works.map(data => <Work data={data}/>)}
+        </div>
         <div className="d-flex justify-content-center mt-60">
           <Link to="/work"><ButtonOutline text="VIEW MORE" outline="outline-light" /></Link>
         </div>

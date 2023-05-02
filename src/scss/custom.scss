@@ -433,6 +433,8 @@ a {
     }
     .bullet-list {
         color: #5e6472;
+        font-size: 15px;
+        padding-bottom: 7px;
     }
 }
 
@@ -507,6 +509,7 @@ a {
 
     &:last-child {
         border-bottom: none;
+        padding-bottom: 0 !important;
     }
 
     .img-container {
@@ -956,16 +959,30 @@ a {
     }
 
     .home-banner {
-        background-position: 79% 35%, 70% 20%, top right;
-
+        background-position: 68% 22%, 70% 20%, top right;
+        background-size: 28rem;
+        height: 560px;
         .banner-heading {
             font-size: 11.6rem;
-            line-height: 19cqh;
+            line-height: 28cqh;
+            letter-spacing: 5.8rem;
+        }
+
+        .banner-img {
+            height: 560px;
+            left: 44%;
         }
 
         p {
             max-width: 400px;
         }
+        // .home-buttons {
+        //    margin-top: 20px;
+        // }
+    }
+
+    .design-preocess {
+        background-position: 100% center, 140% 43%, top right;
     }
 }
 

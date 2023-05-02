@@ -1,5 +1,5 @@
 import { Container, Navbar, Nav, NavDropdown, Form, Button, Offcanvas } from 'react-bootstrap';
-import Logo from '../assets/images/logo.svg';
+import Logo from '../assets/images/logo.png';
 import { BiMenuAltRight } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { useState } from 'react';

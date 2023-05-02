@@ -122,7 +122,9 @@ const Works = () => {
         <Col md={4}><h1 className='text-white'>Work</h1></Col>
         <Col md={8} className="text-gray align-self-center text-end"><a href="tel:+91-90048-55805">(+91) 90048-55805</a> | <a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></Col>
       </Row>
-      {works.map(data => <Work data={data} />)}
+      <div>
+        {works.map(data => <Work data={data} />)}
+      </div>
       <div className="d-flex justify-content-center mt-60">
         <ButtonOutline text="LOAD MORE" outline="outline-light" />
       </div>
