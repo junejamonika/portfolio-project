@@ -158,7 +158,7 @@ const work_experience = [
 const About = () => {
   return (
     <Container fluid className='p-0'>
-      <div className='about-banner'>
+      <div className='about-banner position-relative'>
         <div className='d-flex justify-content-center'>
           <Lottie className='scroll-down-animation' animationData={animationData} loop={true} />
         </div>
@@ -170,8 +170,8 @@ const About = () => {
             <p className='color-gray'>During the last <b>half-decade</b>, I have been privileged to work with many enterprises of varying sizes, from <b>growing startups to multinationals</b>, across <b>10+ industries</b>.</p>
           </Col>
         </Row>
-        <p className='mt-3 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
-        <div className='d-flex color-orange mb-4'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
+        <p className='mt-2 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
+        <div className='d-flex color-orange mb-3'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
         <Link to="/contact"><ButtonDark text="GET IN TOUCH" /></Link>
       </div>
       <div className='values-section'>

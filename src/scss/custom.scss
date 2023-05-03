@@ -265,15 +265,15 @@ a {
 .about-banner {
     background-image: url(../assets/images/about-background.png);
     background-repeat: no-repeat;
-    background-size: 594px;
-    background-position: 91% top;
+    background-size: 560px;
+    background-position: 90% top;
     padding: 0 80px 80px;
 
     .about-heading {
         font-size: 12.5rem;
         font-weight: 500;
         letter-spacing: 30.6px;
-        line-height: 35cqh;
+        line-height: 33cqh;
         padding-top: 80px;
     }
 
@@ -354,10 +354,14 @@ a {
     background-size: cover;
     position: relative;
     min-height: 1360px;
+    h1 {
+        position: absolute;
+        z-index: 1;
+    }
 }
 
 .vertical-line {
-    border-left: 1px solid $color_orange;
+    border-left: 1px solid rgba(253, 112, 80, 0.35);
     position: absolute;
     top: 0;
     margin-left: 26%;
@@ -388,7 +392,7 @@ a {
         height: 100%;
         width: 20px;
         top: 7px;
-        background-image: radial-gradient(circle at center, red 5px, transparent 5px), radial-gradient(circle at center, red 5px, transparent 5px);
+        background-image: radial-gradient(circle at center, $color_orange 5px, transparent 5px), radial-gradient(circle at center, red 5px, transparent 5px);
         background-size: 20px 20px;
         background-position: bottom;
         background-repeat: no-repeat;
@@ -759,12 +763,11 @@ a {
 }
 
 .contact {
-
+    margin-top: 90px;
     .contact-form {
-        margin-top: 90px;
         background-image: url(../assets/images/contact-background.png);
         background-size: cover;
-        padding: 40px 60px 80px 80px;
+        padding: 49px 60px 70px 80px;
 
         .text-field {
             border: none;
@@ -801,7 +804,17 @@ a {
             }
         }
     }
+}
 
+.contact-confirm {
+    background-image: url(../assets/images/contact-background-two.png);
+    background-size: contain;
+    .col {
+        align-self: center;
+    }
+    img {
+        height: 440px;
+    }
     .contact-submit {
         margin-top: 90px;
         padding: 40px 0px 80px 80px;
@@ -822,17 +835,6 @@ a {
                 }
             }
         }
-    }
-}
-
-.contact-confirm {
-    background-image: url(../assets/images/contact-background-two.png);
-    background-size: contain;
-    .col {
-        align-self: center;
-    }
-    img {
-        height: 440px;
     }
 }
 
@@ -914,6 +916,7 @@ a {
 
         .vertical-line {
             padding-top: 500px;
+            opacity: 35%;
         }
     }
 
@@ -949,8 +952,15 @@ a {
 
 @media (min-width:1024px) and (max-width:1280px) {
     .about-banner {
+        background-size: 490px;
+        background-position: 88% top;
         .about-heading {
-            font-size: 170px;
+            font-size: 160px;
+            line-height: 25cqh;
+            letter-spacing: 35.6px;
+        }
+        p {
+            margin-bottom: 6px;
         }
     }
 
