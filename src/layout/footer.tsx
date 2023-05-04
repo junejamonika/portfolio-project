@@ -37,7 +37,7 @@ const Footer = () => {
                             <a href="mailto:smeetmak@gmail.com" target="_blank"><Mail /></a>
                             <a href="tel:+91-90048-55805" target="_blank"><Phone /></a> 
                             <a href="https://www.linkedin.com/in/smeet-makwana-488336173" target="_blank"><Linkdein /></a>
-                            <a href="https://www.fiverr.com/smeetmakwana" target="_blank"><Fiverr /></a>
+                            <a href="https://www.fiverr.com/smeetmakwana" target="_blank" className="fiverr-icon"><Fiverr /></a>
                             <a href="https://www.upwork.com/freelancers/~01da540389d9b90aff" target="_blank"><Upwork /></a>
                         </Nav>
                     </Navbar>

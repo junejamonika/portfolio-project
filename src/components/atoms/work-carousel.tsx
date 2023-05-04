@@ -28,7 +28,7 @@ const WorkCarousel = (props: any) => {
     const { name, desc, buttons, images } = props.data;
 
     return (
-        <Modal show={show} fullscreen={true} centered onHide={() => handleShowModal()}>
+        <Modal show={show} className='work-carousel' fullscreen={true} centered onHide={() => handleShowModal()}>
             <Modal.Header closeButton>
                 <Modal.Title>
                     <div className='d-flex'>
