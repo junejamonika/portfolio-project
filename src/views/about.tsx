@@ -208,7 +208,7 @@ const About = () => {
                 </div>
                 <div>
                   <h6 className='text-light main-heading'>{data.title}</h6>
-                  <h6 className='fw-300 color-gray'>{data.desc}</h6>
+                  <h6 className='fw-300 color-gray sub-heading'>{data.desc}</h6>
                 </div>
               </div>
             )
