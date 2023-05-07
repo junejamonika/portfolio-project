@@ -132,7 +132,7 @@ const Contact = () => {
                       </Col>
                     ))}
                   </Row>
-                  <ButtonDark handleClick={handleSubmit} text="LET'S GET STARTED" />
+                  <ButtonDark width="225px" handleClick={handleSubmit} text="LET'S GET STARTED" />
                 </Form>
               </Col>
               <Col md={5} className="p-0"><img className='h-100 w-100' src={ContactImg} /></Col>
@@ -147,7 +147,7 @@ const Contact = () => {
                   <li><Link to="/work">My Work</Link></li>
                   <li><Link to="/about">About Me</Link></li>
                 </ul>
-                <Link to="/"><ButtonDark text="BACK TO HOME" /></Link>
+                <Link to="/"><ButtonDark width="196px" text="BACK TO HOME" /></Link>
               </Col>
               <Col><img src={ContactImgTwo} /></Col>
             </Row>

@@ -22,8 +22,8 @@ const HomeBanner = () => {
         <p className='innovate'>Innovate. Evolve.</p>
       </div>
       <div className='home-buttons mt-40'>
-        <Link to="/contact"><ButtonDark text="START A PROJECT" /></Link>
-        <Link to="/work"><ButtonOutline text="VIEW WORK" outline="outline-dark" /></Link>
+        <Link to="/contact"><ButtonDark width="212px" text="START A PROJECT" /></Link>
+        <Link to="/work"><ButtonOutline width="168px" text="VIEW WORK" outline="outline-dark" /></Link>
       </div>
     </Container>
   )

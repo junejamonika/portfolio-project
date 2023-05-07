@@ -16,9 +16,9 @@ const Footer = () => {
             <div className='text-small'>Got a project or partnership in mind?</div>
             <h5 className='mb-5'><span className='color-orange'>Let’s collaborate</span> and bring creative solutions to life.</h5>
             <div className='d-flex justify-content-center'>
-                <Link to="/contact"><ButtonDark text='START A PROJECT' /></Link>
+                <Link to="/contact"><ButtonDark width="212px" text='START A PROJECT' /></Link>
                 <span className='me-4'></span>
-                <a href="mailto:smeetmak@gmail.com"><ButtonOutline text="MAIL ME" outline="outline-dark" /></a>
+                <a href="mailto:smeetmak@gmail.com"><ButtonOutline width="135px" text="MAIL ME" outline="outline-dark" /></a>
             </div>
             <Navbar expand="lg">
                 <Container>

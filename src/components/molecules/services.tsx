@@ -67,7 +67,7 @@ const Services = () => {
         {services.map((service, index) => <Col key={index}><Service data={service} count={index + 1} /></Col>)}
       </Row>
       <div className='d-flex justify-content-center'>
-        <Link to="/contact"><ButtonDark text="START A PROJECT" /></Link>
+        <Link to="/contact"><ButtonDark width="212px" text="START A PROJECT" /></Link>
       </div>
     </Container>
   )

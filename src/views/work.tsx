@@ -126,7 +126,7 @@ const Works = () => {
         {works.map(data => <Work data={data} />)}
       </div>
       <div className="d-flex justify-content-center mt-60">
-        <ButtonOutline text="LOAD MORE" outline="outline-light" />
+        <ButtonOutline width="167px" text="LOAD MORE" outline="outline-light" />
       </div>
     </div>
   )

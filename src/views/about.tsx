@@ -172,7 +172,7 @@ const About = () => {
         </Row>
         <p className='mt-2 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
         <div className='d-flex color-orange mb-3'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
-        <Link to="/contact"><ButtonDark text="GET IN TOUCH" /></Link>
+        <Link to="/contact"><ButtonDark width="185px" text="GET IN TOUCH" /></Link>
       </div>
       <div className='values-section'>
         <div className='heading-orange mb-10px'>WHAT DRIVES ME</div>
