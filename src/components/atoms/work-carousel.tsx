@@ -38,7 +38,7 @@ const WorkCarousel = (props: any) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='d-flex justify-content-between mb-3'>
+                <div className='d-flex justify-content-between mb-3 work-desc'>
                     <p className='color-gray text-small'>{desc}</p>
                     <div>
                         {buttons.map((button: any) => <span className='me-3'><ButtonRound button={button} /></span>)}

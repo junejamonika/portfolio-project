@@ -307,7 +307,7 @@ a {
     }
 
     .hr-length {
-        width: 126px;
+        width: 100%;
         margin-top: 4px;
         margin-right: 6px;
     }
@@ -536,6 +536,9 @@ a {
     padding: 80px;
     background-image: url(../assets/images/background-one.png);
     background-size: contain;
+    .divider {
+        padding: 0px 15px;
+    }
 }
 
 .work {
@@ -942,25 +945,76 @@ a {
     .values-section .values .value {
         flex: 0 0 32.333333%;
     }
-
-    .about-banner {
-        .about-heading {
-            font-size: 20px;
-        }
-    }
-
     .work-experience-section {
         min-height: 1850px;
 
         .vertical-line {
             padding-top: 500px;
-            opacity: 35%;
+        }
+    }
+    .work-section {
+        padding: 40px;
+        .work {
+            padding: 0px;
+            .button-round {
+                margin-bottom: 15px;
+            }
+        }
+        .work-title {
+            margin-bottom: 20px;
+        }
+        .text-end {
+            text-align: left !important;
+            a {
+                display: block;
+            }
+            .divider {
+                display: none;
+            }
+        }
+    }
+    .work-carousel {
+        .work-desc {
+            display: block !important;
+        }
+        .carousel {
+            margin-top: 50%;
+        }
+        .carousel-control-prev {
+            margin-left: -20px;
+        }
+        .carousel-control-next { 
+            margin-right: -20px;
+        }
+        .img-sm img {
+            max-width: 53px;
+        }
+    }
+    .design-preocess {
+        background-image: url(../assets/images/design-process-background.png);
+        .process-detail {
+            margin-left: 0;
+        }
+        .process-section { 
+            .process:nth-child(2) {
+                margin-left: 0;
+            }
+            .process:nth-child(3) {
+                margin-left: 0;
+            }
         }
     }
 
     .home-banner {
         background-image: none;
         padding: 0 2rem;
+        height: 530px;
+        .scroll-down-animation {
+            display: none;
+        }
+        .pt-80 {
+            padding-top: 30px;
+        }
 
         .banner-img {
             display: none;
@@ -984,6 +1038,36 @@ a {
             .button-dark {
                 margin-bottom: 20px;
             }
+        }
+    }
+    .about-banner {
+        background-image: none;
+        padding: 0 40px 40px;
+        .scroll-down-animation {
+            display: none;
+        }
+        .about-heading {
+            font-size: 50px;
+            letter-spacing: 18px;
+            font-weight: 500;
+            line-height: inherit;
+        }
+    }
+    .work-experience-section {
+        padding: 80px 40px;
+        .row > div:last-child {
+            margin-top: 80px;
+        }
+    }
+    .contact-page {
+        .scroll-down-animation {
+            display: none;
+        }
+    }
+    .footer .buttons {
+        display: inline-block !important;
+        .button-outline {
+            margin: auto;
         }
     }
 }
@@ -1039,5 +1123,29 @@ a {
         .about-heading {
             font-size: 197px;
         }
+    }
+}
+
+@media (min-height:600px) and (max-height:640px) {
+    .contact .contact-form {
+        padding: 20px 60px 40px 80px;
+        h4 {
+            font-size: 2rem;
+        }
+        form {
+            margin-top: 1rem !important;
+        }
+        .mt-24 {
+            margin-top: 20px;
+        }
+        .mb-40px {
+            margin-bottom: 25px;
+        }
+        .mb-2 {
+            margin-bottom: 0.2rem !important;
+        }
+    }
+    .contact img {
+        width: 94% !important;
     }
 }

@@ -170,8 +170,10 @@ const About = () => {
             <p className='color-gray'>During the last <b>half-decade</b>, I have been privileged to work with many enterprises of varying sizes, from <b>growing startups to multinationals</b>, across <b>10+ industries</b>.</p>
           </Col>
         </Row>
-        <p className='mt-2 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
-        <div className='d-flex color-orange mb-3'><hr className='hr-length align-self-center' /><p>Your Design partner from Mumbai, India.</p></div>
+        <div className='d-inline-block'>
+          <p className='mt-2 fw-600 fs-24px'>Bringing life to your digital experiences.</p>
+          <div className='d-flex color-orange mb-3'><div className='d-flex w-100'><hr className='hr-length align-self-center' /><p className='text-nowrap'>Your Design partner from Mumbai, India.</p></div></div>
+        </div>
         <Link to="/contact"><ButtonDark width="185px" text="GET IN TOUCH" /></Link>
       </div>
       <div className='values-section'>
@@ -196,8 +198,8 @@ const About = () => {
       </div>
       <div className='work-experience-section'>
         <Row>
-          <Col><h1 className='text-light'>Work Experience</h1></Col>
-          <Col><p className='text-gray'>Over my <span className='text-light'>5+ years</span> in the field, I have honed my keen eye for detail, which extends to my approach and results. In addition to my experience of working on <span className='text-light'>wide array of projects</span>, I’ve also been taking on freelancing assignments.</p></Col>
+          <Col md={6}><h1 className='text-light'>Work Experience</h1></Col>
+          <Col md={6}><p className='text-gray'>Over my <span className='text-light'>5+ years</span> in the field, I have honed my keen eye for detail, which extends to my approach and results. In addition to my experience of working on <span className='text-light'>wide array of projects</span>, I’ve also been taking on freelancing assignments.</p></Col>
         </Row>
         <div className="vertical-line">
           {work_experience.map(data => {

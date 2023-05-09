@@ -80,7 +80,7 @@ const Contact = () => {
 
   return (
     <>
-      <Container fluid className='p-0'>
+      <Container fluid className='p-0 contact-page'>
         <div className='position-relative'>
           <div className='d-flex justify-content-center'>
             <Lottie className='scroll-down-animation' animationData={animationData} loop={true} />

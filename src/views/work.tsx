@@ -120,7 +120,7 @@ const Works = () => {
     <div className='work-section mt-100'>
       <Row className='work-title'>
         <Col md={4}><h1 className='text-white'>Work</h1></Col>
-        <Col md={8} className="text-gray align-self-center text-end"><a href="tel:+91-90048-55805">(+91) 90048-55805</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></Col>
+        <Col md={8} className="text-gray align-self-center text-end"><a href="tel:+91-90048-55805">(+91) 90048-55805</a><span className='divider'>|</span><a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></Col>
       </Row>
       <div>
         {works.map(data => <Work data={data} />)}
