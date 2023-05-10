@@ -45,7 +45,7 @@ const Footer = () => {
             </Navbar>
             <hr/>
             <div className='d-flex justify-content-between color-gray fs-small mb-3'>
-                <p>All rights reserved.</p>
+                <p>&copy;&nbsp; All rights reserved.</p>
                 <p>Designed in Adobe Xd.</p>
             </div>
         </Container>
