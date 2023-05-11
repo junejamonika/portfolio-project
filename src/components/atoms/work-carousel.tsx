@@ -40,8 +40,8 @@ const WorkCarousel = (props: any) => {
             <Modal.Body>
                 <div className='d-flex justify-content-between mb-3 work-desc'>
                     <p className='color-gray text-small'>{desc}</p>
-                    <div>
-                        {buttons.map((button: any) => <span className='me-3'><ButtonRound button={button} /></span>)}
+                    <div className='display-chips d-flex'>
+                        {buttons.map((button: any) => <span><ButtonRound button={button} /></span>)}
                     </div>
                 </div>
                 <Carousel activeIndex={index} onSelect={handleSelect}>

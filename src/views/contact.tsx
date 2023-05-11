@@ -80,20 +80,20 @@ const Contact = () => {
 
   return (
     <>
-      <Container fluid className='p-0 contact-page'>
+      <Container fluid className='contact-page'>
         <div className='position-relative'>
           <div className='d-flex justify-content-center'>
             <Lottie className='scroll-down-animation' animationData={animationData} loop={true} />
           </div>
           {!isSubmit ? (
-            <Row className='contact d-flex'>
+            <Row className='contact'>
               <Col md={7} className='contact-form'>
                 <h4>Got ideas? Let’s partner up.</h4>
                 <div className='color-gray'>Reach me anytime at <span><a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></span> or <span><a href="tel:+91-90048-55805">+91 9004855805</a></span></div>
-                <Form className='mt-4'>
+                <Form className='mt-1'>
                   <Row>
                     <Col md={6}>
-                      <Form.Group className="mb-2" controlId="formBasicEmail">
+                      <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
                         <Form.Label>Name*</Form.Label>
                         <Form.Control className='text-field' type="text" placeholder="Your Name" onChange={(e) => setName(e.target.value)} />
                         <Form.Control.Feedback type="invalid" className={errors.name ? 'd-block' : ''}>
@@ -101,8 +101,8 @@ const Contact = () => {
                         </Form.Control.Feedback>
                       </Form.Group>
                     </Col>
-                    <Col md={6} >
-                      <Form.Group className="mb-2" controlId="formBasicEmail">
+                    <Col md={6}>
+                      <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
                         <Form.Label>Email*</Form.Label>
                         <Form.Control className='text-field' type="email" placeholder="xyz@company.com" onChange={(e) => setEmail(e.target.value)} />
                         <Form.Control.Feedback type="invalid" className={errors.email ? 'd-block' : ''}>
@@ -111,7 +111,7 @@ const Contact = () => {
                       </Form.Group>
                     </Col>
                   </Row>
-                  <Row className='mt-24'>
+                  <Row className='mt-4'>
                     <Col>
                       <Form.Group className="mb-2" controlId="formBasicEmail">
                         <Form.Label>How can I help?</Form.Label>
@@ -135,7 +135,7 @@ const Contact = () => {
                   <ButtonDark width="225px" handleClick={handleSubmit} text="LET'S GET STARTED" />
                 </Form>
               </Col>
-              <Col md={5} className="p-0"><img className='h-100 w-100' src={ContactImg} /></Col>
+              <Col md={5} className='p-0'><img className='h-100 w-100' src={ContactImg} /></Col>
             </Row>) : (
             <Row className='d-flex contact-confirm'>
               <Col md={7} className="contact-submit">
@@ -149,7 +149,7 @@ const Contact = () => {
                 </ul>
                 <Link to="/"><ButtonDark width="196px" text="BACK TO HOME" /></Link>
               </Col>
-              <Col><img src={ContactImgTwo} /></Col>
+              <Col md={5}><img src={ContactImgTwo} /></Col>
             </Row>
           )}
         </div>
