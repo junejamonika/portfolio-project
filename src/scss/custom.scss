@@ -875,7 +875,7 @@ a {
     background-image: url(../assets/images/contact-background-two.png);
     background-size: contain;
     background-repeat: no-repeat;
-    .col {
+    .col-md-5 {
         align-self: center;
     }
     img {
@@ -962,7 +962,7 @@ a {
     padding-right:0 !important;
   }
 
-@include media-breakpoint-between(xs, md) {
+@include media-breakpoint-between(xxs, md) {
     .main-nav .nav-link {
         font-size: 2rem;
     }
@@ -1068,6 +1068,11 @@ a {
                 }
             }
         }
+        .pill-orange {
+            padding: 5px 11px;
+            font-size: 12px;
+            margin-left: 20px;
+        }
     }
     .design-preocess {
         background-image: url(../assets/images/design-process-background.png);
@@ -1144,12 +1149,12 @@ a {
         }
     }
     .contact-confirm {
+        img {
+            height: 100%;
+            width: 100%;
+        }
         .contact-submit {
             padding: 40px 40px 80px 40px;
-            img {
-                height: 100%;
-                width: 100%;
-            }
         }
     }
     .footer .buttons {
@@ -1237,6 +1242,6 @@ a {
         width: 94% !important;
     }
     .main-nav .nav-link {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }

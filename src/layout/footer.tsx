@@ -26,8 +26,8 @@ const Footer = () => {
                 </Col>
                 <Col md={4} className="d-flex justify-content-center m-auto footer-nav">
                     <Link to="work">WORK</Link>
-                    <Link to="work">ABOUT</Link>
-                    <Link to="work">CONTACT</Link>
+                    <Link to="about">ABOUT</Link>
+                    <Link to="contact">CONTACT</Link>
                 </Col>
                 <Col md={4} className="d-flex justify-content-end m-auto nav-icons">
                     <a href="mailto:smeetmak@gmail.com" target="_blank"><Mail /></a>
