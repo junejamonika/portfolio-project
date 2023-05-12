@@ -307,9 +307,9 @@ a {
 }
 
 .banner-heading {
-    letter-spacing: 4.9rem;
+    letter-spacing: 6.6vw;
     font-weight: 500;
-    font-size: 15.5rem;
+    font-size: 15.6vw;
     line-height: 35cqh;
     margin-left: -19px;
 }
@@ -346,6 +346,7 @@ a {
 
 .scroll-down-animation {
     height: 80px;
+    width: 140px !important;
     position: absolute;
     bottom: 20px;
     z-index: 1;
@@ -712,8 +713,8 @@ a {
             margin-right: -20px
         }
 
-        background-color: $color_orange;
-        border-color: $color_orange;
+        background-color: $color_orange !important;
+        border-color: $color_orange !important;
     }
 }
 
@@ -1188,9 +1189,9 @@ a {
         background-size: 28rem;
         height: 560px;
         .banner-heading {
-            font-size: 11.6rem;
+            font-size: 15.3vw;
             line-height: 28cqh;
-            letter-spacing: 5.8rem;
+            letter-spacing: 6.5vw;
         }
 
         .banner-img {
@@ -1219,7 +1220,7 @@ a {
     }
 }
 
-@media (min-height:600px) and (max-height:640px) {
+@media (min-height:600px) and (max-height:640px) and (min-width:1200px) {
     .contact .contact-form {
         padding: 20px 60px 40px 80px;
         h4 {
@@ -1242,6 +1243,6 @@ a {
         width: 94% !important;
     }
     .main-nav .nav-link {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
