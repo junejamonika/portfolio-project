@@ -27,7 +27,7 @@ root.render(
         <Route path="/dashboard" element={<PrivateOutlet />}>
           <Route path="*" element={<Dashboard />} />
         </Route>
-        <Route path="sign-in" element={<Auth />} />
+        <Route path="/sign-in" element={<Auth />} />
         <Route path="*" element={<App />} />
       </Routes>
     </Router>
