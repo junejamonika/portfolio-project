@@ -1252,3 +1252,153 @@ a {
         font-size: 3rem;
     }
 }
+
+.sign-in {
+    width: 30rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1px solid $color_orange;
+    .card-body {
+        padding: 30px;
+        h4 {
+            text-align: center;
+            color: $color_orange;
+            margin-bottom: 40px;
+        }
+    }
+    .text-field {
+        border: none;
+        border-bottom: 1px solid #040403;
+        border-radius: 0;
+        padding-left: 0;
+    }
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+    }
+
+    .form-check-input {
+        box-shadow: none;
+
+        &:checked {
+            background-color: $color_orange;
+            border-color: $color_orange;
+        }
+
+        &:hover {
+            border-color: $color_orange;
+        }
+    }
+    .form-check {
+        margin-top: 20px;
+    }
+}
+
+.sidebar {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    min-height: 100vh !important;
+    z-index: 100;
+    padding: 30px 15px;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    .nav-link {
+        color: #040403;
+        font-size: 18px;
+        font-weight: 600;
+        &:hover {
+            color: $color_orange
+        }
+    }
+    .nav-item {
+        &:hover {
+            color: $color_orange
+        }
+    }
+    .active {
+        color: $color_orange;
+        .nav-link {
+            color: $color_orange
+        }
+    }
+}
+#sidebar-wrapper{
+    min-height: 100vh !important;
+    margin-left: -1rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    max-width: 20%;
+}
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#page-content-wrapper {
+    min-width: 0;
+    .heading {
+        color: $color_orange;
+    }
+    .text-field {
+        border: none;
+        border-bottom: 1px solid #040403;
+        border-radius: 0;
+        padding-left: 0;
+    }
+
+    .form-label {
+        font-weight: 600;
+        margin-bottom: 0.1rem;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+    }
+
+    .form-check-input {
+        box-shadow: none;
+
+        &:checked {
+            background-color: $color_orange;
+            border-color: $color_orange;
+        }
+
+        &:hover {
+            border-color: $color_orange;
+        }
+    }
+    .action {
+        color: $color_orange;
+        cursor: pointer;
+    }
+    a {
+        color: $color_orange !important;
+    }
+}
+.delete-modal {
+    .heading {
+        font-size: 1.2rem;
+    }
+    .button-dark {
+        padding: 10px 30px;
+    }
+    .button-outline {
+        padding: 10px 30px;
+    }
+}
+.drop-box {
+    border: 2px solid $color-grey;
+    text-align: center;
+    background-color: $color-grey;
+    padding: 30px;
+    border-radius: 2px;
+    margin: 20px;
+}

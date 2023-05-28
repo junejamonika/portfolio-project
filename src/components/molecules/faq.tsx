@@ -1,18 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Accordion, Container } from 'react-bootstrap'
+import { authGateway } from '../../utils/gateway';
+import URLS from '../../configs/urls';
 
 const FAQ = (props: any) => {
   const { data } = props;
+  const [faqList, setFaqList] = useState([]);
+  useEffect(() => {
+    getFaqList();
+  }, []);
+
+  const getFaqList = async () => {
+    const response = await authGateway("GET", URLS.FAQ.GET_FAQS);
+    if (response.success) {
+      setFaqList(response.data);
+    }
+  };
   return (
     <Container fluid className='faq-section' id="faq">
       <div className='m-auto faq'>
         <h2 className='text-white faq-heading'>Frequently Asked Questions</h2>
         <Accordion flush>
-          {data.map((faq: any, index: number) => {
+          {faqList.map((faq: any, index: number) => {
             return (
               <Accordion.Item eventKey={"key-" + index}>
                 <Accordion.Header>{faq.question}</Accordion.Header>
-                <Accordion.Body className='text-gray'>{faq.answer}</Accordion.Body>
+                <Accordion.Body className='text-gray' dangerouslySetInnerHTML={{__html:faq.answer}}></Accordion.Body>
               </Accordion.Item>
             )
           })}
