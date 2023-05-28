@@ -1,4 +1,5 @@
-const DOMAIN = 'http://localhost:8082/';
+// const DOMAIN = 'http://localhost:8082/';
+const DOMAIN = 'https://smeet-makwana.onrender.com/';
 
 const BASE = `${DOMAIN}api/`;
 
