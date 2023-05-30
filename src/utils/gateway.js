@@ -3,7 +3,6 @@ export async function authGateway(METHOD, URL, BODY = "", formData = false) {
     const OPTIONS = {
         method: METHOD,
         headers: {
-            'Access-Control-Allow-Origin': '*',
             ...(!formData) && { 'Content-Type': 'application/json' },
             'x-access-token': TOKEN,
         },
@@ -24,7 +23,6 @@ export async function guestGateway(METHOD, URL, BODY = "") {
         method: METHOD,
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
         },
         body: BODY,
     };
