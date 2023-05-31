@@ -14,8 +14,8 @@ const URLS = {
   // FAQ
   FAQ: {
     GET_FAQS : `/api/faqs`,
-    DELETE_FAQ: `api/delete-faq`,
-    FAQ: `api/faq`,
+    DELETE_FAQ: `/api/delete-faq`,
+    FAQ: `/api/faq`,
   },
   // VALUES
   VALUES: {
