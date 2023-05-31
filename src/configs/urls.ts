@@ -1,32 +1,27 @@
-// const DOMAIN = 'http://localhost:8082/';
-const DOMAIN = 'https://smeet-makwana.onrender.com/';
-
-const BASE = `${DOMAIN}api/`;
-
 // URLS
 const URLS = {
   // USERS
   USERS: {
-    GET_USERS : `${BASE}users`,
-    DELETE_USER: `${BASE}users/`,
-    GET_USER_DETAIL: `${BASE}users/`,
-    UPDATE_USER: `${BASE}users/updateProfile/`
+    GET_USERS : `api/users`,
+    DELETE_USER: `api/users/`,
+    GET_USER_DETAIL: `api/users/`,
+    UPDATE_USER: `api/users/updateProfile/`
   },
    // AUTH
    AUTH: {
-    SIGNIN : `${BASE}auth/signin`,
+    SIGNIN : `api/auth/signin`,
   },
   // FAQ
   FAQ: {
-    GET_FAQS : `${BASE}faqs`,
-    DELETE_FAQ: `${BASE}delete-faq`,
-    FAQ: `${BASE}faq`,
+    GET_FAQS : `/api/faqs`,
+    DELETE_FAQ: `api/delete-faq`,
+    FAQ: `api/faq`,
   },
   // VALUES
   VALUES: {
-    GET_VALUES : `${BASE}values`,
-    DELETE_VALUE: `${BASE}delete-value`,
-    VALUE: `${BASE}value`,
+    GET_VALUES : `api/values`,
+    DELETE_VALUE: `api/delete-value`,
+    VALUE: `api/value`,
   },
 }
 
