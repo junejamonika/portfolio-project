@@ -7,11 +7,11 @@ export const Menu = [
     Icon: BsFillQuestionCircleFill,
     link: "faq-list",
   },
-  {
-    name: "Work",
-    Icon: FaListAlt,
-    link: "work",
-  },
+  // {
+  //   name: "Work",
+  //   Icon: FaListAlt,
+  //   link: "work",
+  // },
   {
     name: "About",
     Icon: BsPersonCircle,
