@@ -6,58 +6,40 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import URLS from "../../configs/urls";
 import ButtonDark from "../../components/atoms/buttondark";
-import { useSearchParams } from "react-router-dom";
 import { CKEditor } from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 
 const About = () => {
   const navigate = useNavigate();
-  const [faq, setFaq] = useState({ question: "", answer: "" });
-  const [errors, setErrors] = useState({ question: "", answer: "" });
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const id = searchParams.get("id");
+  const [description, setDescription] = useState("");
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (id) {
-      getFaq(id);
-    }
-  }, [id]);
+    getAbout();
+  }, []);
 
-  const getFaq = async (id: string) => {
-    const response = await authGateway("GET", URLS.FAQ.FAQ + "/" + id);
+  const getAbout = async () => {
+    const response = await guestGateway("GET", URLS.ABOUT.ABOUT_ME);
     if (response.success) {
-      setFaq(response.data);
+      setDescription(response.data.description);
     }
-  };
-
-  const handleChange = (event: any) => {
-    setFaq({ ...faq, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = async () => {
-    var errors = { question: "", answer: "" };
-    var is_error = 0;
-    if (faq.question == "") {
-      errors.question = "Please fill in the required field";
-      is_error = 1;
-    }
-    if (faq.answer == "") {
-      errors.answer = "Please fill in the required field";
-      is_error = 1;
+    var is_error = false;
+    if (description == "") {
+     is_error = true
     }
     if (!is_error) {
-      const url = `${URLS.FAQ.FAQ}${id ? "/" + id : ""}`;
-      const method = id ? "PUT" : "POST";
-      const response = await authGateway(method, url, JSON.stringify(faq));
+      const url = URLS.ABOUT.ABOUT_ME;
+      const response = await authGateway('PUT', url, JSON.stringify({description: description}));
       if (response.success) {
-        navigate("/dashboard/faq-list");
         toast.success(response.message);
       } else {
         toast.error(response.message);
       }
     }
-    setErrors(errors);
+    setError(is_error);
   };
   return (
     <Container className="p-4">
@@ -69,17 +51,17 @@ const About = () => {
           <Form.Label className="mb-3">Description*</Form.Label>
           <CKEditor
             editor={ClassicEditor}
-            data={faq.answer}
+            data={description}
             onChange={(event, editor) => {
               const data = editor.getData();
-              setFaq({ ...faq, answer: data });
+              setDescription(data);
             }}
           />
           <Form.Control.Feedback
             type="invalid"
-            className={errors.answer ? "d-block" : ""}
+            className={error ? "d-block" : ""}
           >
-            <AiOutlineExclamationCircle /> {errors.answer}
+            <AiOutlineExclamationCircle /> "This field is required"
           </Form.Control.Feedback>
         </Form.Group>
         <ButtonDark width="150px" text="Submit" handleClick={handleSubmit} />

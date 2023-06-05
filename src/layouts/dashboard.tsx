@@ -7,6 +7,9 @@ import Work from "../views/dashboard/work";
 import WorkList from "../views/dashboard/work-list";
 import About from "../views/dashboard/about";
 import ValuesAndBeliefs from "../views/dashboard/values-and-beliefs";
+import ToolsAndServices from "../views/dashboard/tools-and-services";
+import PassionProjects from "../views/dashboard/passion-projects";
+import WorkExperience from "../views/dashboard/work-experience";
 
 const Dashboard = (props:any) => {
    
@@ -26,6 +29,9 @@ const Dashboard = (props:any) => {
                             <Route path="/work" element={<Work/>}/>
                             <Route path="/about-me" element={<About/>}/>
                             <Route path="/values-and-beliefs" element={<ValuesAndBeliefs/>}/>
+                            <Route path="/tools-and-services" element={<ToolsAndServices/>}/>
+                            <Route path="/passion-projects" element={<PassionProjects/>}/>
+                            <Route path="/work-experience" element={<WorkExperience/>}/>
                         </Routes>
                     </Col> 
                 </Row>

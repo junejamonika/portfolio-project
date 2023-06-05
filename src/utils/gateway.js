@@ -1,4 +1,4 @@
-export async function authGateway(METHOD, URL, BODY = "", formData = false) {
+export async function authGateway(METHOD, URL, BODY, formData = false) {
     const TOKEN = localStorage.getItem("sm-magic")
     const OPTIONS = {
         method: METHOD,
@@ -24,7 +24,7 @@ export async function guestGateway(METHOD, URL, BODY = "") {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: BODY,
+        body: BODY == "" ? null : BODY,
     };
     return await fetch(URL, OPTIONS)
         .then(handleResponse)

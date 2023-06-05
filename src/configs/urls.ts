@@ -19,9 +19,33 @@ const URLS = {
   },
   // VALUES
   VALUES: {
-    GET_VALUES : `api/values`,
-    DELETE_VALUE: `api/delete-value`,
-    VALUE: `api/value`,
+    GET_VALUES : `/api/values`,
+    DELETE_VALUE: `/api/delete-value`,
+    VALUE: `/api/value`,
+  },
+  // ABOUT
+  ABOUT: {
+    ABOUT_ME : `/api/about-me`,
+  },
+  // TOOLS
+  TOOLS: {
+    GET_TOOLS : `/api/tools`,
+    DELETE_TOOL: `/api/delete-tool`,
+    TOOL: `/api/tool`,
+  },
+
+  // PASSION PROJECTS
+  PROJECTS: {
+    GET_PROJECTS : `/api/projects`,
+    DELETE_PROJECT: `/api/delete-project`,
+    PROJECT: `/api/project`,
+  },
+
+  // WORK EXPERIENCE
+  EXPERIENCE: {
+    GET_EXPERIENCE : `/api/experiences`,
+    DELETE_EXPERIENCE: `/api/delete-experience`,
+    EXPERIENCE: `/api/experience`,
   },
 }
 

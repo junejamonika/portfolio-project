@@ -14,41 +14,33 @@ import ButtonDark from "../../components/atoms/buttondark";
 import { toast } from "react-toastify";
 import ButtonSimple from "../../components/atoms/buttonsimple";
 
-const ValuesAndBeliefs = () => {
-  const [valuesList, setValuesList] = useState([]);
-  const [showValueModal, setShowValueModal] = useState(false);
+const PassionProjects = () => {
+  const [projectsList, setProjectsList] = useState([]);
+  const [showProjectModal, setShowProjectModal] = useState(false);
   const [showDeleteModal, setShowdeleteModal] = useState(false);
   const [previewImg, setPreviewImg] = useState("");
-  const [value, setValue] = useState({
+  const [project, setProject] = useState({
     _id: 0,
-    heading: "",
-    subheading: "",
     image: "",
   });
   const [errors, setErrors] = useState({
-    heading: "",
-    subheading: "",
     image: "",
   });
   const [deleteId, setDeleteId] = useState(0);
 
   useEffect(() => {
-    getValuesList();
+    getProjectsList();
   }, []);
 
-  const getValuesList = async () => {
-    const response = await authGateway("GET", URLS.VALUES.GET_VALUES);
+  const getProjectsList = async () => {
+    const response = await authGateway("GET", URLS.PROJECTS.GET_PROJECTS);
     if (response.success) {
-      setValuesList(response.data);
+      setProjectsList(response.data);
     }
   };
 
-  const handleChange = (event: any) => {
-    setValue({ ...value, [event.target.name]: event.target.value });
-  };
-
   const handleImage = (event: any) => {
-    setValue({ ...value, [event.target.name]: event.target.files[0] });
+    setProject({ ...project, [event.target.name]: event.target.files[0] });
     const objectUrl = URL.createObjectURL(event.target.files[0]);
     setPreviewImg(objectUrl);
   };
@@ -58,34 +50,24 @@ const ValuesAndBeliefs = () => {
   };
 
   const handleSubmit = async () => {
-    var errors = { heading: "", subheading: "", image: "" };
+    var errors = { name: "", image: "" };
     var is_error = 0;
-    if (value.heading == "") {
-      errors.heading = "Please fill in the required field";
-      is_error = 1;
-    }
-    if (value.subheading == "") {
-      errors.subheading = "Please fill in the required field";
-      is_error = 1;
-    }
-    if (value.image == "") {
+    if (project.image == "") {
       errors.image = "Image is required";
       is_error = 1;
     }
     if (!is_error) {
       const formData = new FormData();
-      formData.append("heading", value.heading);
-      formData.append("subheading", value.subheading);
-      if (typeof value.image != "string") {
-        formData.append("image", value.image);
+      if (typeof project.image != "string") {
+        formData.append("image", project.image);
       }
-      const url = `${URLS.VALUES.VALUE}${value._id ? "/" + value._id : ""}`;
-      const method = value._id ? "PUT" : "POST";
+      const url = `${URLS.PROJECTS.PROJECT}${project._id ? "/" + project._id : ""}`;
+      const method = project._id ? "PUT" : "POST";
       const response = await authGateway(method, url, formData, true);
       if (response.success) {
         toast.success(response.message);
-        setShowValueModal(false);
-        getValuesList();
+        setShowProjectModal(false);
+        getProjectsList();
       } else {
         toast.error(response.message);
       }
@@ -93,10 +75,10 @@ const ValuesAndBeliefs = () => {
     setErrors(errors);
   };
 
-  const handleValueModal = (value: any) => {
-    setValue(value);
-    setShowValueModal(true);
-    setPreviewImg(value.image);
+  const handleProjectModal = (project: any) => {
+    setProject(project);
+    setShowProjectModal(true);
+    setPreviewImg(project.image);
   };
 
   const handleDeleteModal = (id: number) => {
@@ -107,23 +89,23 @@ const ValuesAndBeliefs = () => {
   const handleDelete = async () => {
     const response = await authGateway(
       "DELETE",
-      URLS.VALUES.DELETE_VALUE + "/" + deleteId
+      URLS.PROJECTS.DELETE_PROJECT + "/" + deleteId
     );
     if (response.success) {
       setShowdeleteModal(!showDeleteModal);
       toast.success(response.message);
-      getValuesList();
+      getProjectsList();
     }
   };
   return (
     <Container className="p-4">
       <div className="d-flex justify-content-between pt-3">
-        <h5 className="heading">Values & Beliefs</h5>
+        <h5 className="name">Passion Projects</h5>
         <ButtonOutline
           handleClick={() => {
-            setValue({ _id: 0, heading: "", subheading: "", image: "" });
+            setProject({ _id: 0, image: "" });
             setPreviewImg("");
-            setShowValueModal(true);
+            setShowProjectModal(true);
           }}
           text="Add"
           width="140px"
@@ -134,21 +116,17 @@ const ValuesAndBeliefs = () => {
         <thead>
           <tr>
             <th>#</th>
-            <th>Main Heading</th>
-            <th>Sub Heading</th>
             <th>image</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
-          {valuesList &&
-            valuesList.map((valueObj, key) => {
-              const { _id, heading, subheading, image } = valueObj;
+          {projectsList &&
+            projectsList.map((projectObj, key) => {
+              const { _id, name, image } = projectObj;
               return (
                 <tr key={key}>
                   <td>{key + 1}</td>
-                  <td>{heading}</td>
-                  <td>{subheading}</td>
                   <td>
                     <img src={image} height="50" />
                   </td>
@@ -156,7 +134,7 @@ const ValuesAndBeliefs = () => {
                     <AiOutlineEdit
                       className="me-3"
                       size="25"
-                      onClick={() => handleValueModal(valueObj)}
+                      onClick={() => handleProjectModal(projectObj)}
                     />
                     <AiOutlineDelete
                       size="22"
@@ -174,7 +152,7 @@ const ValuesAndBeliefs = () => {
         centered
         className="delete-modal"
       >
-        <Modal.Body className="p-3 heading">
+        <Modal.Body className="p-3 name">
           Are you sure you want to delete?
         </Modal.Body>
         <Modal.Footer>
@@ -192,45 +170,13 @@ const ValuesAndBeliefs = () => {
         </Modal.Footer>
       </Modal>
       <Modal
-        show={showValueModal}
-        onHide={() => setShowValueModal(!showValueModal)}
+        show={showProjectModal}
+        onHide={() => setShowProjectModal(!showProjectModal)}
         centered
         className="delete-modal"
       >
-        <Modal.Body className="p-3 heading">
-          <h6>{value._id ? "Update" : "Add"} Value & Belief</h6>
-          <Form.Group className="mb-2 mt-4" controlId="formBasicEmail">
-            <Form.Label>Main Heading*</Form.Label>
-            <Form.Control
-              className="text-field"
-              type="text"
-              name="heading"
-              onChange={(event) => handleChange(event)}
-              defaultValue={value.heading}
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={errors.heading ? "d-block" : ""}
-            >
-              <AiOutlineExclamationCircle /> {errors.heading}
-            </Form.Control.Feedback>
-          </Form.Group>
-          <Form.Group className="mb-2 mt-4" controlId="formBasicEmail">
-            <Form.Label>Sub Heading*</Form.Label>
-            <Form.Control
-              className="text-field"
-              type="text"
-              name="subheading"
-              onChange={(event) => handleChange(event)}
-              defaultValue={value.subheading}
-            />
-            <Form.Control.Feedback
-              type="invalid"
-              className={errors.subheading ? "d-block" : ""}
-            >
-              <AiOutlineExclamationCircle /> {errors.subheading}
-            </Form.Control.Feedback>
-          </Form.Group>
+        <Modal.Body className="p-3 name">
+          <h6>{project._id ? "Update" : "Add"} Passion Project</h6>
           <Form.Group controlId="formFile" className="mb-3 d-none">
             <Form.Control
               type="file"
@@ -247,7 +193,7 @@ const ValuesAndBeliefs = () => {
                   className="close"
                   onClick={() => {
                     setPreviewImg("");
-                    setValue({ ...value, image: "" });
+                    setProject({ ...project, image: "" });
                   }}
                 />
               </div>
@@ -267,14 +213,14 @@ const ValuesAndBeliefs = () => {
         <Modal.Footer>
           <ButtonDark
             width="120px"
-            text={value._id ? "Update" : "Add"}
+            text={project._id ? "Update" : "Add"}
             handleClick={() => handleSubmit()}
           />
           <ButtonOutline
             text="Cancel"
             outline="outline-dark"
             width="120px"
-            handleClick={() => setShowValueModal(!showValueModal)}
+            handleClick={() => setShowProjectModal(!showProjectModal)}
           />
         </Modal.Footer>
       </Modal>
@@ -282,4 +228,4 @@ const ValuesAndBeliefs = () => {
   );
 };
 
-export default ValuesAndBeliefs;
+export default PassionProjects;

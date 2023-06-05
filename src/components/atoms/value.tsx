@@ -5,8 +5,8 @@ const Value = (props: any) => {
   return (
     <div className='value text-light'>
         <img src={data.image}/>
-        <div className='mb-1 mt-1'>{data.title}</div>
-        <div className='fs-small opacity-60'>{data.text}</div>
+        <div className='mb-1 mt-1'>{data.heading}</div>
+        <div className='fs-small opacity-60'>{data.subheading}</div>
     </div>
   )
 }

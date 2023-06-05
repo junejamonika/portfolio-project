@@ -4,6 +4,7 @@ import Logo from "../assets/images/logo.png";
 import { Menu } from "../configs/constants";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
+import {IoMdArrowDropleft, IoMdArrowDropdown} from "react-icons/io";
 
 const Sidebar = (props: any) => {
   const navigate = useNavigate();
@@ -33,13 +34,14 @@ const Sidebar = (props: any) => {
           return elmt.subMenu ? (
             <>
               <Nav.Item
-                className={`ps-3 d-flex text-truncate`}
+                className={`ps-3 d-flex text-truncate w-100`}
                 onClick={() => setOpen(!open)}
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
               >
                 <Icon className="align-self-center" />
                 <Nav.Link>{elmt.name}</Nav.Link>
+                {open ? (<IoMdArrowDropdown className="align-self-center ms-auto"/>) : (<IoMdArrowDropleft className="align-self-center ms-auto"/>)}
               </Nav.Item>
               <Collapse in={open}>
                 <div id="example-collapse-text">

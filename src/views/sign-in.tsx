@@ -52,7 +52,7 @@ export function SignIn() {
       <Container>
         <Card className="sign-in">
           <Card.Body className="flex flex-col gap-4">
-            <h4>Admin Portal</h4>
+            <h4>CMS Portal</h4>
             <Form.Group className="mb-2 mt-3" controlId="formBasicEmail">
               <Form.Label>Username</Form.Label>
               <Form.Control className='text-field' type="text" placeholder="Your Username" name="username" onChange={(event) => handleChange(event)} />

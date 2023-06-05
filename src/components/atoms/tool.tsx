@@ -5,7 +5,7 @@ const Tool = (props:any) => {
   return (
     <div className='tool-section text-light'>
         <img src={data.image}/>
-        <div>{data.title}</div>
+        <div>{data.name}</div>
     </div>
   )
 }
