@@ -38,7 +38,7 @@ export function SignIn() {
       const response = await guestGateway("POST", URLS.AUTH.SIGNIN, JSON.stringify(user));
       if (response.accessToken) {
         localStorage.setItem("sm-magic", response.accessToken);
-        navigate('/dashboard/faq-list')
+        navigate('/dashboard/messages')
       }
       if(response.message) {
         toast.error(response.message)

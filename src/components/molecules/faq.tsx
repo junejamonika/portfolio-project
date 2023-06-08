@@ -4,7 +4,6 @@ import { authGateway } from '../../utils/gateway';
 import URLS from '../../configs/urls';
 
 const FAQ = (props: any) => {
-  const { data } = props;
   const [faqList, setFaqList] = useState([]);
   useEffect(() => {
     getFaqList();

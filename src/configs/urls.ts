@@ -47,6 +47,17 @@ const URLS = {
     DELETE_EXPERIENCE: `/api/delete-experience`,
     EXPERIENCE: `/api/experience`,
   },
+  // WORK
+  WORK: {
+    GET_WORK : `/api/work`,
+    DELETE_WORK: `/api/delete-work`,
+    WORK: `/api/work`,
+  },
+  CONTACT : {
+    GET_CONTACT : `/api/contact`,
+    CONTACT: `/api/contact`,
+    DELETE_CONTACT: `/api/delete-contact`,
+  }
 }
 
 export default URLS;

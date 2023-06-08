@@ -10,6 +10,7 @@ import ValuesAndBeliefs from "../views/dashboard/values-and-beliefs";
 import ToolsAndServices from "../views/dashboard/tools-and-services";
 import PassionProjects from "../views/dashboard/passion-projects";
 import WorkExperience from "../views/dashboard/work-experience";
+import Messages from "../views/dashboard/message-list";
 
 const Dashboard = (props:any) => {
    
@@ -32,6 +33,7 @@ const Dashboard = (props:any) => {
                             <Route path="/tools-and-services" element={<ToolsAndServices/>}/>
                             <Route path="/passion-projects" element={<PassionProjects/>}/>
                             <Route path="/work-experience" element={<WorkExperience/>}/>
+                            <Route path="/messages" element={<Messages/>}/>
                         </Routes>
                     </Col> 
                 </Row>

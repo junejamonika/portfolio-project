@@ -15,21 +15,21 @@ const Work = (props: any) => {
                 <Row>
                     <Col className='text-white' md={4}>
                         <h5>{data.name}</h5>
-                        <h5 className='fw-light'>{data.type}</h5>
+                        <h5 className='fw-light'>{data.title}</h5>
                     </Col>
                     <Col md={4}>
                         <ul className='text-gray'>
-                            {data.list.map((entry: string, index: number) => <li key={index}>{entry}</li>)}
+                            {data.accomplishments.map((entry: string, index: number) => <li key={index}>{entry}</li>)}
                         </ul>
                     </Col>
                     <Col md={4} className='align-self-center'>
                         <div className='float-end'>
-                            {data.buttons.map((button: any) => <span className='me-3'><ButtonRound button={button} /></span>)}
+                            {data.tags.map((tag: any) => <span className='me-3'><ButtonRound name={tag} /></span>)}
                         </div>
                     </Col>
                 </Row>
                 <div className='mt-4 img-container'>
-                    <img className='image-large' src={data.image} />
+                    <img className='image-large' src={data.images[0]} />
                     <div className="middle">
                         <div className="view-project" onClick={() => setShowModal(true)}>VIEW PROJECT<BsArrowRight className='arrow-icon ms-1' /></div>
                     </div>

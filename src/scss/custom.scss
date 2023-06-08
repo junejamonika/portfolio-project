@@ -578,7 +578,7 @@ a {
 .work-section {
   padding: 80px;
   background-image: url(../assets/images/background-one.png);
-  background-size: contain;
+  background-size: cover;
   .divider {
     padding: 0px 15px;
   }
@@ -1263,6 +1263,41 @@ a {
   }
 }
 
+@media (min-width: 1900px) {
+  .navbar {
+    .container {
+      min-width: 92%;
+    }
+  }
+  .home-banner {
+    background-size: 37rem;
+    height: 720px;
+    .intro-line {
+      font-size: 25px;
+    }
+    .banner-heading {
+      font-size: 16.3vw;
+      line-height: 30cqh;
+      
+      font-size: 18.7vw;
+      letter-spacing: 4.7vw;
+    }
+    .banner-img {
+      left: 51%;
+      height:690px
+    }
+    p {
+      max-width: 650px;
+    }
+    .text-gray {
+      font-size: 22px;
+    }
+    .innovate {
+      font-size: 46px;
+    }
+  }
+}
+
 .sign-in {
   width: 30rem;
   left: 50%;
@@ -1433,6 +1468,18 @@ a {
   margin-bottom: 20px;
   display: inline-block;
   position: relative;
+  .close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    cursor: pointer;
+  }
+}
+.preview-images {
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
   .close {
     position: absolute;
     top: -8px;

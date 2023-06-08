@@ -1,17 +1,30 @@
-import { BsFillQuestionCircleFill, BsPersonCircle, BsTools, BsUnity, BsListTask, BsPersonWorkspace } from "react-icons/bs";
+import {
+  BsFillQuestionCircleFill,
+  BsPersonCircle,
+  BsTools,
+  BsUnity,
+  BsListTask,
+  BsPersonWorkspace,
+} from "react-icons/bs";
 import { FaListAlt } from "react-icons/fa";
 import { RiLogoutBoxFill } from "react-icons/ri";
+import { IoMdMail } from "react-icons/io";
 export const Menu = [
+  {
+    name: "Messages",
+    Icon: IoMdMail,
+    link: "messages",
+  },
   {
     name: "FAQ",
     Icon: BsFillQuestionCircleFill,
     link: "faq-list",
   },
-  // {
-  //   name: "Work",
-  //   Icon: FaListAlt,
-  //   link: "work",
-  // },
+  {
+    name: "Work",
+    Icon: FaListAlt,
+    link: "work-list",
+  },
   {
     name: "About",
     Icon: BsPersonCircle,

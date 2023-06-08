@@ -1,135 +1,60 @@
-import React from 'react'
-import Work from '../components/molecules/work'
-import ProjectOne from '../assets/images/projects/project1/1.png'
-import ProjectOneTwo from '../assets/images/projects/project1/2.png'
-import ProjectOneThree from '../assets/images/projects/project1/3.png'
-import ProjectOneFour from '../assets/images/projects/project1/4.png'
-import ProjectFive from '../assets/images/projects/project1/5.png'
-import ProjectTwo from '../assets/images/projects/project2/1.png'
-import ProjectThree from '../assets/images/projects/project3/1.png'
-import { Col, Row } from 'react-bootstrap'
-import ButtonOutline from '../components/atoms/buttonoutline'
-
-const works = [
-  {
-    name: 'Ripples',
-    type: 'Website Design',
-    desc: 'E-Commerce Website design for eco-friendly bags',
-    list: [
-      "Landing Page",
-      "Product Categories",
-      "Product Listings",
-      "Product Details",
-      "Shipping Cart",
-    ],
-    buttons: [
-      {
-        name: 'Website',
-        link: 'test.com'
-      },
-      {
-        name: 'Ecommerce',
-        link: 'test.com'
-      },
-      {
-        name: 'Startup',
-        link: 'test.com'
-      }
-    ],
-    image: ProjectOne,
-    images: [
-      ProjectOne,
-      ProjectOneTwo,
-      ProjectOneThree,
-      ProjectOneFour,
-      ProjectFive
-    ]
-  },
-  {
-    name: 'Ripples',
-    type: 'Website Design',
-    desc: 'E-Commerce Website design for eco-friendly bags',
-    list: [
-      "Landing Page",
-      "Product Categories",
-      "Product Listings",
-      "Product Details",
-      "Shipping Cart",
-    ],
-    buttons: [
-      {
-        name: 'Website',
-        link: 'test.com'
-      },
-      {
-        name: 'Ecommerce',
-        link: 'test.com'
-      },
-      {
-        name: 'Startup',
-        link: 'test.com'
-      }
-    ],
-    image: ProjectTwo,
-    images: [
-      ProjectOne,
-      ProjectOneTwo,
-      ProjectOneThree,
-      ProjectOneFour,
-      ProjectFive
-    ]
-  },
-  {
-    name: 'Ripples',
-    type: 'Website Design',
-    desc: 'E-Commerce Website design for eco-friendly bags',
-    list: [
-      "Landing Page",
-      "Product Categories",
-      "Product Listings",
-      "Product Details",
-      "Shipping Cart",
-    ],
-    buttons: [
-      {
-        name: 'Website',
-        link: 'test.com'
-      },
-      {
-        name: 'Ecommerce',
-        link: 'test.com'
-      },
-      {
-        name: 'Startup',
-        link: 'test.com'
-      }
-    ],
-    image: ProjectThree,
-    images: [
-      ProjectOne,
-      ProjectOneTwo,
-      ProjectOneThree,
-      ProjectOneFour,
-      ProjectFive
-    ]
-  }
-]
+import React, { useEffect, useState } from "react";
+import Work from "../components/molecules/work";
+import { Col, Row } from "react-bootstrap";
+import ButtonOutline from "../components/atoms/buttonoutline";
+import { guestGateway } from "../utils/gateway";
+import URLS from "../configs/urls";
 
 const Works = () => {
+  const [workList, setWorkList] = useState([]);
+  const [limit, setLimit] = useState(1);
+  const [totalCount, setTotalCount] = useState(1);
+  useEffect(() => {
+    getWorkList(limit);
+  }, []);
+
+  const getWorkList = async (limit: number) => {
+    const response = await guestGateway(
+      "GET",
+      URLS.WORK.GET_WORK + `?limit=${limit}`
+    );
+    if (response.success) {
+      setWorkList(response.data);
+      setTotalCount(response.count);
+    }
+  };
   return (
-    <div className='work-section mt-100'>
-      <Row className='work-title'>
-        <Col md={4}><h1 className='text-white'>Work</h1></Col>
-        <Col md={8} className="text-gray align-self-center text-end"><a href="tel:+91-90048-55805">(+91) 90048-55805</a><span className='divider'>|</span><a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a></Col>
+    <div className="work-section mt-100">
+      <Row className="work-title">
+        <Col md={4}>
+          <h1 className="text-white">Work</h1>
+        </Col>
+        <Col md={8} className="text-gray align-self-center text-end">
+          <a href="tel:+91-90048-55805">(+91) 90048-55805</a>
+          <span className="divider">|</span>
+          <a href="mailto:smeetmak@gmail.com">smeetmak@gmail.com</a>
+        </Col>
       </Row>
       <div>
-        {works.map(data => <Work data={data} />)}
+        {workList.map((data) => (
+          <Work data={data} />
+        ))}
       </div>
       <div className="d-flex justify-content-center mt-60">
-        <ButtonOutline width="167px" text="LOAD MORE" outline="outline-light" />
+        {totalCount > limit && (
+          <ButtonOutline
+            width="167px"
+            text="LOAD MORE"
+            outline="outline-light"
+            handleClick={() => {
+              setLimit(limit + 3);
+              getWorkList(limit + 3);
+            }}
+          />
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;

@@ -25,7 +25,7 @@ const WorkCarousel = (props: any) => {
         setShow(false);
     }
 
-    const { name, desc, buttons, images } = props.data;
+    const { name, type, tags, images } = props.data;
 
     return (
         <Modal show={show} className='work-carousel' fullscreen={true} centered onHide={() => handleShowModal()}>
@@ -39,9 +39,9 @@ const WorkCarousel = (props: any) => {
             </Modal.Header>
             <Modal.Body>
                 <div className='d-flex justify-content-between mb-3 work-desc'>
-                    <p className='color-gray text-small'>{desc}</p>
+                    <p className='color-gray text-small'>{type}</p>
                     <div className='display-chips d-flex'>
-                        {buttons.map((button: any) => <span><ButtonRound button={button} /></span>)}
+                        {tags.map((button: any) => <span><ButtonRound name={button} /></span>)}
                     </div>
                 </div>
                 <Carousel activeIndex={index} onSelect={handleSelect}>

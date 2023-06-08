@@ -2,9 +2,9 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 
 const ButtonRound = (props: any) => {
-    const { button } = props
+    const { name } = props
     return (
-        <Button variant="outline-secondary" className='button-round'>{button.name}</Button>
+        <Button variant="outline-secondary" className='button-round'>{name}</Button>
     )
 }
 
