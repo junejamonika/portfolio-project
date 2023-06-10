@@ -7,7 +7,7 @@ import URLS from "../configs/urls";
 
 const Works = () => {
   const [workList, setWorkList] = useState([]);
-  const [limit, setLimit] = useState(1);
+  const [limit, setLimit] = useState(3);
   const [totalCount, setTotalCount] = useState(1);
   useEffect(() => {
     getWorkList(limit);
