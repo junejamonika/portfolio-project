@@ -25,7 +25,7 @@ const WorkCarousel = (props: any) => {
         setShow(false);
     }
 
-    const { name, type, tags, images } = props.data;
+    const { name, type, tags, images, status } = props.data;
 
     return (
         <Modal show={show} className='work-carousel' fullscreen={true} centered onHide={() => handleShowModal()}>
@@ -33,7 +33,7 @@ const WorkCarousel = (props: any) => {
                 <Modal.Title>
                     <div className='d-flex'>
                         <h3>{name}</h3>
-                        <div className='pill-orange'>Case study coming soon</div>
+                        <div className='pill-orange'>{status}</div>
                     </div>
                 </Modal.Title>
             </Modal.Header>

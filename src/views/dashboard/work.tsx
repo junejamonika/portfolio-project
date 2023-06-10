@@ -16,6 +16,7 @@ const Work = () => {
     name: "",
     type: "",
     title: "",
+    status: "",
     accomplishments: [""],
     tags: [""],
     images: [],
@@ -24,6 +25,7 @@ const Work = () => {
     name: "",
     type: "",
     title: "",
+    status: "",
     accomplishments: "",
     tags: "",
     images: "",
@@ -113,6 +115,7 @@ const Work = () => {
       name: "",
       type: "",
       title: "",
+      status: "",
       accomplishments: "",
       tags: "",
       images: "",
@@ -128,6 +131,10 @@ const Work = () => {
     }
     if (work.title == "") {
       errors.title = "Please fill in the required field";
+      is_error = 1;
+    }
+    if (work.status == "") {
+      errors.status = "Please fill in the required field";
       is_error = 1;
     }
     if (work.accomplishments.length == 0 || work.accomplishments.some(val => val == '')) {
@@ -148,6 +155,7 @@ const Work = () => {
       formData.append("name", work.name);
       formData.append("type", work.type);
       formData.append("title", work.title);
+      formData.append("status", work.status);
       formData.append("accomplishments", JSON.stringify(work.accomplishments));
       formData.append("tags", JSON.stringify(work.tags));
       formData.append("dltImages", JSON.stringify(dltImages));
@@ -220,6 +228,22 @@ const Work = () => {
             className={errors.title ? "d-block" : ""}
           >
             <AiOutlineExclamationCircle /> {errors.title}
+          </Form.Control.Feedback>
+        </Form.Group>
+        <Form.Group className="mb-2 mt-4" controlId="formBasicEmail">
+          <Form.Label>Status*</Form.Label>
+          <Form.Control
+            className="text-field"
+            type="text"
+            name="status"
+            onChange={(event) => handleChange(event)}
+            defaultValue={work.status}
+          />
+          <Form.Control.Feedback
+            type="invalid"
+            className={errors.status ? "d-block" : ""}
+          >
+            <AiOutlineExclamationCircle /> {errors.status}
           </Form.Control.Feedback>
         </Form.Group>
         <Row>
