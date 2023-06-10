@@ -12,8 +12,10 @@ import URLS from '../configs/urls'
 
 const Home = () => {
   const [workList, setWorkList] = useState([]);
+  const [serviceList, setServiceList] = useState([]);
   useEffect(() => {
     getWorkList();
+    getServiceList();
   }, []);
 
   const getWorkList = async () => {
@@ -25,10 +27,17 @@ const Home = () => {
       setWorkList(response.data);
     }
   };
+
+  const getServiceList = async () => {
+    const response = await guestGateway("GET", URLS.SERVICE.GET_SERVICES);
+    if (response.success) {
+      setServiceList(response.data);
+    }
+  };
   return (
     <>
       <HomeBanner/>
-      <Services />
+      <Services services={serviceList} />
       <div className='work-section'>
         <Row className='work-title'>
           <Col md={5}><h1 className='text-white'>Work</h1></Col>

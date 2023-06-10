@@ -57,6 +57,12 @@ const URLS = {
     GET_CONTACT : `/api/contact`,
     CONTACT: `/api/contact`,
     DELETE_CONTACT: `/api/delete-contact`,
+  },
+  //SERVICE
+  SERVICE : {
+    GET_SERVICES : `/api/services`,
+    SERVICE: `/api/service`,
+    DELETE_SERVICE: `/api/delete-service`,
   }
 }
 

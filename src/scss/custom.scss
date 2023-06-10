@@ -338,7 +338,7 @@ a {
     font-size: 12.5rem;
     font-weight: 500;
     letter-spacing: 30.6px;
-    line-height: 33cqh;
+    line-height: 31cqh;
     padding-top: 80px;
   }
 
@@ -1278,13 +1278,13 @@ a {
     .banner-heading {
       font-size: 16.3vw;
       line-height: 30cqh;
-      
+
       font-size: 18.7vw;
       letter-spacing: 4.7vw;
     }
     .banner-img {
       left: 51%;
-      height:690px
+      height: 690px;
     }
     p {
       max-width: 650px;
@@ -1295,6 +1295,11 @@ a {
     .innovate {
       font-size: 46px;
     }
+  }
+  .about-banner .about-heading {
+    font-size: 16rem;
+    letter-spacing: 50.6px;
+    line-height: 27cqh;
   }
 }
 

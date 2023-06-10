@@ -11,10 +11,10 @@ import ToolsAndServices from "../views/dashboard/tools-and-services";
 import PassionProjects from "../views/dashboard/passion-projects";
 import WorkExperience from "../views/dashboard/work-experience";
 import Messages from "../views/dashboard/message-list";
+import ServiceList from "../views/dashboard/service-list";
+import Service from "../views/dashboard/service";
 
 const Dashboard = (props:any) => {
-   
-
     return (
         <>
          <Container fluid>
@@ -34,6 +34,8 @@ const Dashboard = (props:any) => {
                             <Route path="/passion-projects" element={<PassionProjects/>}/>
                             <Route path="/work-experience" element={<WorkExperience/>}/>
                             <Route path="/messages" element={<Messages/>}/>
+                            <Route path="/services" element={<ServiceList/>}/>
+                            <Route path="/service" element={<Service/>}/>
                         </Routes>
                     </Col> 
                 </Row>

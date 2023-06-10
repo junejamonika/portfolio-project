@@ -9,11 +9,17 @@ import {
 import { FaListAlt } from "react-icons/fa";
 import { RiLogoutBoxFill } from "react-icons/ri";
 import { IoMdMail } from "react-icons/io";
+import { MdDesignServices } from "react-icons/md";
 export const Menu = [
   {
     name: "Messages",
     Icon: IoMdMail,
     link: "messages",
+  },
+  {
+    name: "Services",
+    Icon: MdDesignServices,
+    link: "services",
   },
   {
     name: "FAQ",

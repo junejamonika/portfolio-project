@@ -173,7 +173,7 @@ const About = () => {
           </Col>
         </Row>
         <div className="vertical-line">
-          {experienceList.map((data) => {
+          {experienceList.slice(0).reverse().map((data) => {
             return (
               <div className="mb-5 d-flex">
                 <div className="year-section color-orange fw-600 align-self-center">
