@@ -617,6 +617,7 @@ a {
     height: auto;
     backface-visibility: hidden;
     transition: 0.5s all ease-in-out;
+    max-height: 500px !important;
   }
 
   .middle {
@@ -1233,6 +1234,20 @@ a {
   .about-banner {
     .about-heading {
       font-size: 197px;
+    }
+  }
+  .img-sm {
+    img {
+      max-height: 100px;
+      max-width: 160px;
+    }
+  }
+  .carousel img {
+    max-height: 450px;
+  }
+  .work-carousel {
+    .text-small {
+      margin-bottom: 0.7rem;
     }
   }
 }
