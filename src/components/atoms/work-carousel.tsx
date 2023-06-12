@@ -38,7 +38,7 @@ const WorkCarousel = (props: any) => {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='d-flex justify-content-between mb-2 work-desc'>
+                <div className='d-flex justify-content-between mb-1 work-desc'>
                     <p className='color-gray text-small'>{type}</p>
                     <div className='display-chips d-flex'>
                         {tags.map((button: any) => <span><ButtonRound name={button} /></span>)}
@@ -57,7 +57,7 @@ const WorkCarousel = (props: any) => {
                         )
                     })}
                 </Carousel>
-                <div className='d-flex img-sm mt-3'>
+                <div className='d-flex img-sm mt-2'>
                     {images.map((image: string, i: number) => <div className='img-container'><img onClick={() => setIndex(i)} className={index == i ? 'img-active' : 'img-not-active'} src={image}/></div>)}
                 </div>
             </Modal.Body>
