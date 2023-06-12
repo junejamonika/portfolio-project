@@ -32,13 +32,13 @@ const WorkCarousel = (props: any) => {
             <Modal.Header closeButton>
                 <Modal.Title>
                     <div className='d-flex'>
-                        <h3>{name}</h3>
+                        <h4>{name}</h4>
                         <div className='pill-orange'>{status}</div>
                     </div>
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='d-flex justify-content-between mb-3 work-desc'>
+                <div className='d-flex justify-content-between mb-2 work-desc'>
                     <p className='color-gray text-small'>{type}</p>
                     <div className='display-chips d-flex'>
                         {tags.map((button: any) => <span><ButtonRound name={button} /></span>)}
@@ -57,7 +57,7 @@ const WorkCarousel = (props: any) => {
                         )
                     })}
                 </Carousel>
-                <div className='d-flex img-sm mt-4'>
+                <div className='d-flex img-sm mt-3'>
                     {images.map((image: string, i: number) => <div className='img-container'><img onClick={() => setIndex(i)} className={index == i ? 'img-active' : 'img-not-active'} src={image}/></div>)}
                 </div>
             </Modal.Body>

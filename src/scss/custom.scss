@@ -75,10 +75,10 @@ a {
     border-radius: 4px;
   }
   .modal-header {
-    padding: 16px 30px;
+    padding: 14px 30px 0px;
   }
   .modal-body {
-    padding: 0 30px 30px 30px;
+    padding: 0 40px 30px 40px;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -104,11 +104,11 @@ a {
   }
   .carousel-control-prev {
     width: 3%;
-    margin-left: -35px;
+    margin-left: -40px;
   }
   .carousel-control-next {
     width: 3%;
-    margin-right: -35px;
+    margin-right: -40px;
   }
 }
 
